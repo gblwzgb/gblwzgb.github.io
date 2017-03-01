@@ -87,16 +87,37 @@
 
 
 
-<meta name="description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
+<meta name="description" content="前言switch-case语句完全可以与if-else语句互转，但通常来说，switch-case语句执行效率要高。
+default在当前switch找不到匹配的case时执行。default并不是必须的。
+一旦case匹配，就会顺序执行后面的程序代码，而不管后面的case是否匹配，直到遇见break。（所以这里有坑要避免）
+switch支持的类型java7的switch支持一下几种类型
+
+
+
+类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AngularJs验证动态生成的表单">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/switch的用法/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
-<meta property="og:updated_time" content="2017-03-01T01:13:19.738Z">
+<meta property="og:description" content="前言switch-case语句完全可以与if-else语句互转，但通常来说，switch-case语句执行效率要高。
+default在当前switch找不到匹配的case时执行。default并不是必须的。
+一旦case匹配，就会顺序执行后面的程序代码，而不管后面的case是否匹配，直到遇见break。（所以这里有坑要避免）
+switch支持的类型java7的switch支持一下几种类型
+
+
+
+类">
+<meta property="og:updated_time" content="2017-03-01T06:19:44.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJs验证动态生成的表单">
-<meta name="twitter:description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
+<meta name="twitter:description" content="前言switch-case语句完全可以与if-else语句互转，但通常来说，switch-case语句执行效率要高。
+default在当前switch找不到匹配的case时执行。default并不是必须的。
+一旦case匹配，就会顺序执行后面的程序代码，而不管后面的case是否匹配，直到遇见break。（所以这里有坑要避免）
+switch支持的类型java7的switch支持一下几种类型
+
+
+
+类">
 
 
 
@@ -124,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/28/switch的用法/"/>
 
 
 
@@ -259,7 +280,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/switch的用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -318,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
                   </a>
                 </span>
 
@@ -353,10 +374,64 @@
       
 
       
-        <p>有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。<br>而AngularJs的表单验证是和name绑定的。如下。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>邮箱:<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">ng-model</span>=<span class="string">"user.email"</span> <span class="attr">required</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:red"</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$dirty &amp;&amp; myForm.email.$invalid"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$error.required"</span>&gt;</span>邮箱是必须的。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$error.email"</span>&gt;</span>非法的邮箱地址。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>我把name改成<code>{ {user.email} }</code>，验证的地方改成<code>myForm.{ {user.email} }.$error.required</code>。报错。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>google了一下，用<code>ng-form</code>标签<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">"outerForm"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-repeat</span>=<span class="string">"item in items"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">ng-form</span> <span class="attr">name</span>=<span class="string">"innerForm"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"qwe"</span> <span class="attr">ng-model</span>=<span class="string">"item.foo"</span> /&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"innerForm.qwe.$error.required"</span>&gt;</span>required<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">ng-form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">ng-disabled</span>=<span class="string">"outerForm.$invalid"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这里的name可以随便写了，只要和验证的地方对应就好了。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>switch-case语句完全可以与if-else语句互转，但通常来说，switch-case语句执行效率要高。</p>
+<p>default在当前switch找不到匹配的case时执行。default并不是必须的。</p>
+<p>一旦case匹配，就会顺序执行后面的程序代码，而不管后面的case是否匹配，直到遇见break。（所以这里有坑要避免）</p>
+<h1 id="switch支持的类型"><a href="#switch支持的类型" class="headerlink" title="switch支持的类型"></a>switch支持的类型</h1><p>java7的switch支持一下几种类型</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td></td>
+</tr>
+<tr>
+<td>Character</td>
+<td></td>
+</tr>
+<tr>
+<td>byte</td>
+<td></td>
+</tr>
+<tr>
+<td>Byte</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>Integer</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td></td>
+</tr>
+<tr>
+<td>Short</td>
+<td></td>
+</tr>
+<tr>
+<td>String(java7)</td>
+<td></td>
+</tr>
+<tr>
+<td>enum(java5)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h1><h3 id="default的使用"><a href="#default的使用" class="headerlink" title="default的使用"></a>default的使用</h3><p>default在当前switch找不到匹配的case时执行。default并不是必须的。default并不一定要写在最后，但是好怪。。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test004</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">4</span>;</div><div class="line">        <span class="keyword">switch</span> (i)&#123;</div><div class="line">            <span class="keyword">case</span> <span class="number">1</span>:      <span class="comment">//这个值要和括号里变量的类型一样，不然编译报错</span></div><div class="line">                System.out.print(<span class="number">1</span>);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>:</div><div class="line">                System.out.print(<span class="number">0</span>);</div><div class="line">            <span class="keyword">case</span> <span class="number">5</span>:</div><div class="line">                System.out.print(<span class="number">5</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>输出结果:</strong> 05<br>因为default后面没有break，所以会执行case5。如前言里所说。</p>
+<h3 id="switch使用枚举"><a href="#switch使用枚举" class="headerlink" title="switch使用枚举"></a>switch使用枚举</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test005</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">static</span> <span class="keyword">enum</span> E &#123;</div><div class="line">        A, B, C, D</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        E e = E.B;    <span class="comment">//注意不要写成Enum e = E.b; 否则case那句会编译报错</span></div><div class="line">        <span class="keyword">switch</span> (e) &#123;</div><div class="line">            <span class="keyword">case</span> A:</div><div class="line">                System.out.println(<span class="number">1</span>);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>:</div><div class="line">                System.out.println(<span class="number">0</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="忘记写break的陷阱"><a href="#忘记写break的陷阱" class="headerlink" title="忘记写break的陷阱"></a>忘记写break的陷阱</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test007</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">2</span>;</div><div class="line">        <span class="keyword">switch</span> (i)&#123;</div><div class="line">            <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">                System.out.print(<span class="number">1</span>);</div><div class="line">            <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">                System.out.print(<span class="number">2</span>);</div><div class="line">            <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">                System.out.print(<span class="number">3</span>);</div><div class="line">            <span class="keyword">default</span>:</div><div class="line">                System.out.print(<span class="number">0</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>输出结果:</strong> 230  </p>
 
       
     </div>
@@ -387,8 +462,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/final的用法/" rel="next" title="AngularJs验证动态生成的表单">
-                <i class="fa fa-chevron-left"></i> AngularJs验证动态生成的表单
+              <a href="/2017/02/28/通过js实现导入导出txt格式/" rel="next" title="通过js实现导入导出txt格式">
+                <i class="fa fa-chevron-left"></i> 通过js实现导入导出txt格式
               </a>
             
           </div>
@@ -396,6 +471,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/28/java的八种基本类型的默认值/" rel="prev" title="AngularJs验证动态生成的表单">
+                AngularJs验证动态生成的表单 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -513,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">1.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#switch支持的类型"><span class="nav-number"></span> <span class="nav-text">switch支持的类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实例"><span class="nav-number"></span> <span class="nav-text">代码实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#default的使用"><span class="nav-number">0.1.</span> <span class="nav-text">default的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#switch使用枚举"><span class="nav-number">0.2.</span> <span class="nav-text">switch使用枚举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忘记写break的陷阱"><span class="nav-number">0.3.</span> <span class="nav-text">忘记写break的陷阱</span></a></li></ol></li></ol></div>
             
 
           </div>

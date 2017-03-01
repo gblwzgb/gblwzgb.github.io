@@ -87,16 +87,142 @@
 
 
 
-<meta name="description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
+<meta name="description" content="参见表格
+
+
+基本类型
+默认值
+
+
+
+
+byte
+0
+
+
+short
+0
+
+
+int
+0
+
+
+long
+0L
+
+
+float
+0.0f
+
+
+double
+0.0d
+
+
+char
+‘\u0000’
+
+
+boolean
+false
+
+
+
+代码123456789101112131415161718192021222324252627/** * 实验基本类型的默认值 */public class Test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AngularJs验证动态生成的表单">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/java的八种基本类型的默认值/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
-<meta property="og:updated_time" content="2017-03-01T01:13:19.738Z">
+<meta property="og:description" content="参见表格
+
+
+基本类型
+默认值
+
+
+
+
+byte
+0
+
+
+short
+0
+
+
+int
+0
+
+
+long
+0L
+
+
+float
+0.0f
+
+
+double
+0.0d
+
+
+char
+‘\u0000’
+
+
+boolean
+false
+
+
+
+代码123456789101112131415161718192021222324252627/** * 实验基本类型的默认值 */public class Test">
+<meta property="og:updated_time" content="2017-03-01T06:19:22.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJs验证动态生成的表单">
-<meta name="twitter:description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
+<meta name="twitter:description" content="参见表格
+
+
+基本类型
+默认值
+
+
+
+
+byte
+0
+
+
+short
+0
+
+
+int
+0
+
+
+long
+0L
+
+
+float
+0.0f
+
+
+double
+0.0d
+
+
+char
+‘\u0000’
+
+
+boolean
+false
+
+
+
+代码123456789101112131415161718192021222324252627/** * 实验基本类型的默认值 */public class Test">
 
 
 
@@ -124,7 +250,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/28/java的八种基本类型的默认值/"/>
 
 
 
@@ -259,7 +385,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/java的八种基本类型的默认值/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -318,8 +444,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
                   </a>
                 </span>
 
@@ -353,10 +479,52 @@
       
 
       
-        <p>有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。<br>而AngularJs的表单验证是和name绑定的。如下。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>邮箱:<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">ng-model</span>=<span class="string">"user.email"</span> <span class="attr">required</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:red"</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$dirty &amp;&amp; myForm.email.$invalid"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$error.required"</span>&gt;</span>邮箱是必须的。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$error.email"</span>&gt;</span>非法的邮箱地址。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>我把name改成<code>{ {user.email} }</code>，验证的地方改成<code>myForm.{ {user.email} }.$error.required</code>。报错。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>google了一下，用<code>ng-form</code>标签<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">"outerForm"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-repeat</span>=<span class="string">"item in items"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">ng-form</span> <span class="attr">name</span>=<span class="string">"innerForm"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"qwe"</span> <span class="attr">ng-model</span>=<span class="string">"item.foo"</span> /&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"innerForm.qwe.$error.required"</span>&gt;</span>required<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">ng-form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">ng-disabled</span>=<span class="string">"outerForm.$invalid"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这里的name可以随便写了，只要和验证的地方对应就好了。</p>
+        <h3 id="参见表格"><a href="#参见表格" class="headerlink" title="参见表格"></a>参见表格</h3><table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>0</td>
+</tr>
+<tr>
+<td>short</td>
+<td>0</td>
+</tr>
+<tr>
+<td>int</td>
+<td>0</td>
+</tr>
+<tr>
+<td>long</td>
+<td>0L</td>
+</tr>
+<tr>
+<td>float</td>
+<td>0.0f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>0.0d</td>
+</tr>
+<tr>
+<td>char</td>
+<td>‘\u0000’</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 实验基本类型的默认值</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test002</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">byte</span> defaultByte; <span class="comment">//如果是final类型的话就必须初始化了，没有默认值</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">short</span> defaultShort;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> defaultInt;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">long</span> defaultLong;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">float</span> defaultFloat;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">double</span> defaultDouble;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">char</span> defaultChar;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> defaultBoolean;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String str;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(defaultByte);</div><div class="line">        System.out.println(defaultShort);</div><div class="line">        System.out.println(defaultInt);</div><div class="line">        System.out.println(defaultLong);</div><div class="line">        System.out.println(defaultFloat);</div><div class="line">        System.out.println(defaultDouble);</div><div class="line">        System.out.println(defaultChar);</div><div class="line">        System.out.println(defaultBoolean);</div><div class="line">        System.out.println(<span class="string">"输出"</span> + str);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>输出</strong><br>0<br>0<br>0<br>0<br>0.0<br>0.0  </p>
+<p>false<br>输出null</p>
+<h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><p>默认值只有成员变量才有，局部变量是没有默认值的。</p>
 
       
     </div>
@@ -387,7 +555,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/final的用法/" rel="next" title="AngularJs验证动态生成的表单">
+              <a href="/2017/02/28/switch的用法/" rel="next" title="AngularJs验证动态生成的表单">
                 <i class="fa fa-chevron-left"></i> AngularJs验证动态生成的表单
               </a>
             
@@ -396,6 +564,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/28/java的八种基本类型~byte/" rel="prev" title="AngularJs验证动态生成的表单">
+                AngularJs验证动态生成的表单 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -513,7 +685,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">1.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参见表格"><span class="nav-number">1.</span> <span class="nav-text">参见表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点"><span class="nav-number">3.</span> <span class="nav-text">注意点</span></a></li></ol></div>
             
 
           </div>

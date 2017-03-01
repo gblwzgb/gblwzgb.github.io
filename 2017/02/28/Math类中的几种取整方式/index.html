@@ -87,16 +87,73 @@
 
 
 
-<meta name="description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
+<meta name="description" content="方法名
+作用
+
+
+
+
+ceil
+天花板，即向上取整，结果大于等于原值
+
+
+floor
+地板，即向下取整，结果小于等于原值
+
+
+round
+四舍五入，算法为Math.floor(x+0.5)
+
+
+
+代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AngularJs验证动态生成的表单">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/Math类中的几种取整方式/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
-<meta property="og:updated_time" content="2017-03-01T01:13:19.738Z">
+<meta property="og:description" content="方法名
+作用
+
+
+
+
+ceil
+天花板，即向上取整，结果大于等于原值
+
+
+floor
+地板，即向下取整，结果小于等于原值
+
+
+round
+四舍五入，算法为Math.floor(x+0.5)
+
+
+
+代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
+<meta property="og:updated_time" content="2017-03-01T06:19:36.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJs验证动态生成的表单">
-<meta name="twitter:description" content="有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&amp;lt;p&amp;gt;邮箱:&amp;lt;br&amp;gt;    &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;user.email&quot; required&amp;gt;    &amp;lt;span style=&quot;color:red&quot; ng-">
+<meta name="twitter:description" content="方法名
+作用
+
+
+
+
+ceil
+天花板，即向上取整，结果大于等于原值
+
+
+floor
+地板，即向下取整，结果小于等于原值
+
+
+round
+四舍五入，算法为Math.floor(x+0.5)
+
+
+
+代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
 
 
 
@@ -124,7 +181,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/28/Math类中的几种取整方式/"/>
 
 
 
@@ -259,7 +316,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/AngularJs验证动态生成的表单/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/Math类中的几种取整方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -318,8 +375,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
                   </a>
                 </span>
 
@@ -353,11 +410,29 @@
       
 
       
-        <p>有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。<br>而AngularJs的表单验证是和name绑定的。如下。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>邮箱:<span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">ng-model</span>=<span class="string">"user.email"</span> <span class="attr">required</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color:red"</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$dirty &amp;&amp; myForm.email.$invalid"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$error.required"</span>&gt;</span>邮箱是必须的。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"myForm.email.$error.email"</span>&gt;</span>非法的邮箱地址。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>我把name改成<code>{ {user.email} }</code>，验证的地方改成<code>myForm.{ {user.email} }.$error.required</code>。报错。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>google了一下，用<code>ng-form</code>标签<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">"outerForm"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-repeat</span>=<span class="string">"item in items"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">ng-form</span> <span class="attr">name</span>=<span class="string">"innerForm"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"qwe"</span> <span class="attr">ng-model</span>=<span class="string">"item.foo"</span> /&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">ng-show</span>=<span class="string">"innerForm.qwe.$error.required"</span>&gt;</span>required<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">ng-form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">ng-disabled</span>=<span class="string">"outerForm.$invalid"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>这里的name可以随便写了，只要和验证的地方对应就好了。</p>
-
+        <table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ceil</td>
+<td>天花板，即向上取整，结果大于等于原值</td>
+</tr>
+<tr>
+<td>floor</td>
+<td>地板，即向下取整，结果小于等于原值</td>
+</tr>
+<tr>
+<td>round</td>
+<td>四舍五入，算法为Math.floor(x+0.5)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test001</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(Math.floor(-<span class="number">10.4</span>));  <span class="comment">//-11.0</span></div><div class="line">        System.out.println(Math.floor(-<span class="number">10.6</span>));  <span class="comment">//-11.0</span></div><div class="line">        System.out.println(Math.floor(<span class="number">10.4</span>));   <span class="comment">//10.0</span></div><div class="line">        System.out.println(Math.floor(<span class="number">10.6</span>));   <span class="comment">//10.0</span></div><div class="line">        </div><div class="line">        System.out.println(Math.ceil(-<span class="number">10.4</span>));  <span class="comment">//-10.0</span></div><div class="line">        System.out.println(Math.ceil(-<span class="number">10.6</span>));  <span class="comment">//-10.0</span></div><div class="line">        System.out.println(Math.ceil(<span class="number">10.4</span>));   <span class="comment">//11.0</span></div><div class="line">        System.out.println(Math.ceil(<span class="number">10.6</span>));   <span class="comment">//11.0</span></div><div class="line">        </div><div class="line">        System.out.println(Math.round(-<span class="number">10.1</span>));  <span class="comment">//-10</span></div><div class="line">        System.out.println(Math.round(-<span class="number">10.5</span>));  <span class="comment">//-10</span></div><div class="line">        System.out.println(Math.round(-<span class="number">10.9</span>));  <span class="comment">//-11</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.1</span>));   <span class="comment">//10</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.5</span>));   <span class="comment">//11</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.9</span>));   <span class="comment">//11</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -387,7 +462,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/final的用法/" rel="next" title="AngularJs验证动态生成的表单">
+              <a href="/2017/02/28/java数组复制的四种方式/" rel="next" title="AngularJs验证动态生成的表单">
                 <i class="fa fa-chevron-left"></i> AngularJs验证动态生成的表单
               </a>
             
@@ -396,6 +471,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/28/final的用法/" rel="prev" title="AngularJs验证动态生成的表单">
+                AngularJs验证动态生成的表单 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -513,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">1.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码示例"><span class="nav-number">1.</span> <span class="nav-text">代码示例</span></a></li></ol></div>
             
 
           </div>
