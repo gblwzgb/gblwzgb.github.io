@@ -99,7 +99,7 @@ java实现AOP1. 过滤器也就是Filter，技术基于java的回调机制。设
 java实现AOP1. 过滤器也就是Filter，技术基于java的回调机制。设计的模式使用的责任链模式。
 2. 拦截器技术基于java的反射。设计的模式使用的代理模式。
 可">
-<meta property="og:updated_time" content="2017-03-03T03:46:12.503Z">
+<meta property="og:updated_time" content="2017-03-03T03:54:08.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈AOP">
 <meta name="twitter:description" content="AOP（Aspect-Oriented Programming，面向切面编程）是一种编程的思想。是对OOP的补充和完善。OOP擅长纵向的编程，对横向编程无力，因为会产生大量重复代码。而AOP的横向编程能力正好弥补了这一缺陷。
@@ -416,7 +416,8 @@ java实现AOP1. 过滤器也就是Filter，技术基于java的回调机制。设
 <li>拦截器可以访问action上下文、值栈里的对象，过滤器不能。</li>
 <li>在action生命周期中，拦截器可以多次被调用，而过滤器只能在容器初始化时被调用一次。</li>
 </ol>
-<h2 id="执行顺序"><a href="#执行顺序" class="headerlink" title="执行顺序"></a>执行顺序</h2><p>一个action请求进来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">graph LR</div><div class="line">过滤前--&gt;拦截前</div><div class="line">拦截前--&gt;action处理</div><div class="line">action处理--&gt;拦截后</div><div class="line">拦截后--&gt;过滤后</div></pre></td></tr></table></figure></p>
+<h2 id="执行顺序"><a href="#执行顺序" class="headerlink" title="执行顺序"></a>执行顺序</h2><p>一个action请求进来。</p>
+<p>过滤前–&gt;拦截前–&gt;action处理–&gt;拦截后–&gt;过滤后</p>
 <h1 id="Spring实现AOP"><a href="#Spring实现AOP" class="headerlink" title="Spring实现AOP"></a>Spring实现AOP</h1><h2 id="1-aop"><a href="#1-aop" class="headerlink" title="1. aop"></a>1. aop</h2><p>不要被Spring的aop给迷惑了，aop是种编程思想，而Spring的aop只是这种思想的具体实现。使用的也是代理模式。可以选择通过JDKProxy或cglib来代理。</p>
 
       
