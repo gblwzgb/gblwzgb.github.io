@@ -87,73 +87,19 @@
 
 
 
-<meta name="description" content="方法名
-作用
-
-
-
-
-ceil
-天花板，即向上取整，结果大于等于原值
-
-
-floor
-地板，即向下取整，结果小于等于原值
-
-
-round
-四舍五入，算法为Math.floor(x+0.5)
-
-
-
-代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
+<meta name="description" content="问题我在controller里定义了两个简单的handler来返回一个消息。12345@RequestMapping(value = &quot;/message&quot;)@ResponseBodypublic Message get() &amp;#123;    return new Message(penguinCounter.incrementAndGet() + &quot; penguin!&quot;);&amp;#125;
+我也可以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Math类中的几种取整方式">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/Math类中的几种取整方式/index.html">
+<meta property="og:title" content="ResponseEntity和@ResponseBody的区别">
+<meta property="og:url" content="http://yoursite.com/2017/03/03/ResponseEntity和@ResponseBody的区别/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="方法名
-作用
-
-
-
-
-ceil
-天花板，即向上取整，结果大于等于原值
-
-
-floor
-地板，即向下取整，结果小于等于原值
-
-
-round
-四舍五入，算法为Math.floor(x+0.5)
-
-
-
-代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
-<meta property="og:updated_time" content="2017-03-01T06:22:59.487Z">
+<meta property="og:description" content="问题我在controller里定义了两个简单的handler来返回一个消息。12345@RequestMapping(value = &quot;/message&quot;)@ResponseBodypublic Message get() &amp;#123;    return new Message(penguinCounter.incrementAndGet() + &quot; penguin!&quot;);&amp;#125;
+我也可以">
+<meta property="og:updated_time" content="2017-03-03T10:12:47.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Math类中的几种取整方式">
-<meta name="twitter:description" content="方法名
-作用
-
-
-
-
-ceil
-天花板，即向上取整，结果大于等于原值
-
-
-floor
-地板，即向下取整，结果小于等于原值
-
-
-round
-四舍五入，算法为Math.floor(x+0.5)
-
-
-
-代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
+<meta name="twitter:title" content="ResponseEntity和@ResponseBody的区别">
+<meta name="twitter:description" content="问题我在controller里定义了两个简单的handler来返回一个消息。12345@RequestMapping(value = &quot;/message&quot;)@ResponseBodypublic Message get() &amp;#123;    return new Message(penguinCounter.incrementAndGet() + &quot; penguin!&quot;);&amp;#125;
+我也可以">
 
 
 
@@ -181,13 +127,13 @@ round
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/28/Math类中的几种取整方式/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/03/ResponseEntity和@ResponseBody的区别/"/>
 
 
 
 
 
-  <title> Math类中的几种取整方式 | lxl's Blog </title>
+  <title> ResponseEntity和@ResponseBody的区别 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -358,7 +304,7 @@ round
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/Math类中的几种取整方式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/ResponseEntity和@ResponseBody的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -379,7 +325,7 @@ round
             
             
               
-                Math类中的几种取整方式
+                ResponseEntity和@ResponseBody的区别
               
             
           </h1>
@@ -394,8 +340,8 @@ round
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T18:42:47+08:00">
-                2017-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T11:34:47+08:00">
+                2017-03-03
               </time>
             
 
@@ -417,8 +363,8 @@ round
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
                   </a>
                 </span>
 
@@ -452,29 +398,14 @@ round
       
 
       
-        <table>
-<thead>
-<tr>
-<th>方法名</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ceil</td>
-<td>天花板，即向上取整，结果大于等于原值</td>
-</tr>
-<tr>
-<td>floor</td>
-<td>地板，即向下取整，结果小于等于原值</td>
-</tr>
-<tr>
-<td>round</td>
-<td>四舍五入，算法为Math.floor(x+0.5)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test001</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(Math.floor(-<span class="number">10.4</span>));  <span class="comment">//-11.0</span></div><div class="line">        System.out.println(Math.floor(-<span class="number">10.6</span>));  <span class="comment">//-11.0</span></div><div class="line">        System.out.println(Math.floor(<span class="number">10.4</span>));   <span class="comment">//10.0</span></div><div class="line">        System.out.println(Math.floor(<span class="number">10.6</span>));   <span class="comment">//10.0</span></div><div class="line">        </div><div class="line">        System.out.println(Math.ceil(-<span class="number">10.4</span>));  <span class="comment">//-10.0</span></div><div class="line">        System.out.println(Math.ceil(-<span class="number">10.6</span>));  <span class="comment">//-10.0</span></div><div class="line">        System.out.println(Math.ceil(<span class="number">10.4</span>));   <span class="comment">//11.0</span></div><div class="line">        System.out.println(Math.ceil(<span class="number">10.6</span>));   <span class="comment">//11.0</span></div><div class="line">        </div><div class="line">        System.out.println(Math.round(-<span class="number">10.1</span>));  <span class="comment">//-10</span></div><div class="line">        System.out.println(Math.round(-<span class="number">10.5</span>));  <span class="comment">//-10</span></div><div class="line">        System.out.println(Math.round(-<span class="number">10.9</span>));  <span class="comment">//-11</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.1</span>));   <span class="comment">//10</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.5</span>));   <span class="comment">//11</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.9</span>));   <span class="comment">//11</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>我在controller里定义了两个简单的handler来返回一个消息。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/message"</span>)</div><div class="line"><span class="meta">@ResponseBody</span></div><div class="line"><span class="function"><span class="keyword">public</span> Message <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Message(penguinCounter.incrementAndGet() + <span class="string">" penguin!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我也可以用下面这种形式<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/message"</span>)</div><div class="line"><span class="function">ResponseEntity&lt;Message&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</div><div class="line">    Message message = <span class="keyword">new</span> Message(penguinCounter.incrementAndGet() + <span class="string">" penguin!"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ResponseEntity&lt;Message&gt;(message, HttpStatus.OK);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>那么这两种实现方式有什么区别呢？</p>
+<h2 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h2><p>ResponseEntity可以更加灵活的在response里添加header信息。</p>
+<p>通过<a href="http://docs.spring.io/spring/docs/3.0.x/javadoc-api/org/springframework/http/ResponseEntity.html" target="_blank" rel="external">Spring官方文档</a>里的第四个构造函数<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ResponseEntity(T body, MultiValueMap&lt;String,String&gt; headers, HttpStatus statusCode)</div></pre></td></tr></table></figure></p>
+<p>比较常用的headers有Status,Content-Type和Cache-Control。</p>
+<p>如果不需要自己设置，使用@ResponseBody会稍微简便一点。</p>
+
       
     </div>
 
@@ -504,8 +435,8 @@ round
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/28/AngularJs验证动态生成的表单/" rel="next" title="AngularJs验证动态生成的表单">
-                <i class="fa fa-chevron-left"></i> AngularJs验证动态生成的表单
+              <a href="/2017/03/03/浅谈AOP/" rel="next" title="浅谈AOP">
+                <i class="fa fa-chevron-left"></i> 浅谈AOP
               </a>
             
           </div>
@@ -514,8 +445,8 @@ round
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/28/java数组复制的四种方式/" rel="prev" title="java数组复制的四种方式">
-                java数组复制的四种方式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/03/Java设计模式--单例模式/" rel="prev" title="Java设计模式--单例模式">
+                Java设计模式--单例模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -634,7 +565,7 @@ round
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码示例"><span class="nav-number">1.</span> <span class="nav-text">代码示例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#答案"><span class="nav-number">2.</span> <span class="nav-text">答案</span></a></li></ol></div>
             
 
           </div>
