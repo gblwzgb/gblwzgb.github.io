@@ -115,7 +115,7 @@ The remote end hung up unexpectedly
 但是可以pull成功的，排除这种可能。
 后来尝试只修改一点点文件，发现可以push成功。
 解决方法最后发现是华数">
-<meta property="og:updated_time" content="2017-03-06T00:57:38.623Z">
+<meta property="og:updated_time" content="2017-03-06T01:08:42.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git在push的时候显示the remote end hung up的解决办法 long的解决办法">
 <meta name="twitter:description" content="今天在家华数网push的时候，一会提示
@@ -430,11 +430,7 @@ The remote end hung up unexpectedly
 <p>但是可以pull成功的，排除这种可能。</p>
 <p>后来尝试只修改一点点文件，发现可以push成功。</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>最后发现是华数网太坑了。。网速贼慢导致的push失败。。因为博客生成的静态文件太多，网速又慢，相当于git提交超时了。。略微设置一下就解决了这个问题了。</p>
-<p>在git bash里运行这两句命令即可。</p>
-<blockquote>
-<p>git config –global http.lowSpeedLimit 0</p>
-<p>git config –global http.lowSpeedTime 999999</p>
-</blockquote>
+<p>在git bash里运行这两句命令即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global http.lowSpeedLimit 0</div><div class="line"></div><div class="line">git config --global http.lowSpeedTime 999999</div></pre></td></tr></table></figure></p>
 <p>单位都是秒。</p>
 
       
