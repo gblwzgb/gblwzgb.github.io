@@ -91,9 +91,8 @@
 原因是虽然Nginx设置了https的协议，但是根据下面的图片来看，response.sendRedirect()以后请求被重定向到http上了。
 查了资料
 解决方法：
-找运维人员nginx配置：  
-
-proxy_set_head">
+找运维人员nginx配置： 
+1234proxy_set_he">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx+重定向导致的问题">
 <meta property="og:url" content="http://yoursite.com/2017/03/07/Nginx+重定向导致的问题/index.html">
@@ -102,20 +101,18 @@ proxy_set_head">
 原因是虽然Nginx设置了https的协议，但是根据下面的图片来看，response.sendRedirect()以后请求被重定向到http上了。
 查了资料
 解决方法：
-找运维人员nginx配置：  
-
-proxy_set_head">
+找运维人员nginx配置： 
+1234proxy_set_he">
 <meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/16359046-file_1488855118533_754c.png">
-<meta property="og:updated_time" content="2017-03-07T07:10:01.908Z">
+<meta property="og:updated_time" content="2017-03-07T07:17:29.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx+重定向导致的问题">
 <meta name="twitter:description" content="场景描述在做项目迁移的时候，有个bug是页面跳转以后显示不出来： 1response.sendRedirect(&quot;/xxx/xxx.htm?action=xxx&quot;);
 原因是虽然Nginx设置了https的协议，但是根据下面的图片来看，response.sendRedirect()以后请求被重定向到http上了。
 查了资料
 解决方法：
-找运维人员nginx配置：  
-
-proxy_set_head">
+找运维人员nginx配置： 
+1234proxy_set_he">
 <meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/16359046-file_1488855118533_754c.png">
 
 
@@ -409,17 +406,11 @@ proxy_set_head">
 <p>原因是虽然Nginx设置了https的协议，但是根据下面的图片来看，response.sendRedirect()以后请求被重定向到http上了。<br><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/16359046-file_1488855118533_754c.png" alt="image"></p>
 <p><a href="http://feitianbenyue.iteye.com/blog/2056357" target="_blank" rel="external">查了资料</a></p>
 <h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><ol>
-<li><p>找运维人员nginx配置：  </p>
-<blockquote>
-<p>proxy_set_header       Host $host;<br>proxy_set_header  X-Real-IP  $remote_addr;<br>proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;<br>proxy_set_header X-Forwarded-Proto  $scheme;  </p>
-</blockquote>
+<li><p>找运维人员nginx配置： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">proxy_set_header       Host $host;  </div><div class="line">proxy_set_header  X-Real-IP  $remote_addr;  </div><div class="line">proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;  </div><div class="line">proxy_set_header X-Forwarded-Proto  $scheme;</div></pre></td></tr></table></figure>
 </li>
 <li><p>在tomcat的server.xml里的Engine模块下加入：  </p>
-<blockquote>
-<valve classname="org.apache.catalina.valves.RemoteIpValve" protocolheader="X-Forwarded-Proto">
-
-
-</valve></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteIpValve&quot; protocolHeader=&quot;X-Forwarded-Proto&quot; /&gt;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 
