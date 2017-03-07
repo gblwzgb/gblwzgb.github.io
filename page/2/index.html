@@ -292,6 +292,194 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/java的八种基本类型的默认值/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxl's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/28/java的八种基本类型的默认值/" itemprop="url">
+                  java的八种基本类型的默认值
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T18:42:47+08:00">
+                2017-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          参见表格
+
+
+基本类型
+默认值
+
+
+
+
+byte
+0
+
+
+short
+0
+
+
+int
+0
+
+
+long
+0L
+
+
+float
+0.0f
+
+
+double
+0.0d
+
+
+char
+‘\u0000’
+
+
+boolean
+false
+
+
+
+代码1234567891011121314151617181920
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/28/java的八种基本类型的默认值/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/switch的用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -440,7 +628,7 @@ default在当前switch找不到匹配的case时执行。default并不是必须�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/Math类中的几种取整方式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/28/final的用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -462,8 +650,8 @@ default在当前switch找不到匹配的case时执行。default并不是必须�
             
               
                 
-                <a class="post-title-link" href="/2017/02/28/Math类中的几种取整方式/" itemprop="url">
-                  Math类中的几种取整方式
+                <a class="post-title-link" href="/2017/02/28/final的用法/" itemprop="url">
+                  final的用法
                 </a>
               
             
@@ -539,33 +727,12 @@ default在当前switch找不到匹配的case时执行。default并不是必须�
       
         
           
-          
-
-
-方法名
-作用
-
-
-
-
-ceil
-天花板，即向上取整，结果大于等于原值
-
-
-floor
-地板，即向下取整，结果小于等于原值
-
-
-round
-四舍五入，算法为Math.floor(x+0.5)
-
-
-
-代码示例12345678910111213141516171819202122public cla
+          用final可以修饰类，方法，变量。分别表示类不可被继承，方法不可重写，变量不可变（不可变指的是引用地址不可变，内部的值还是可以变的）。
+代码实例final修饰的成员变量被final修饰的类变量就变成了常量，必须要进行初始化，有两次机会可以初始化，一是声明的时候直接初始化，或者在构造函数里初始化。1
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/02/28/Math类中的几种取整方式/#more" rel="contents">
+            <a class="btn" href="/2017/02/28/final的用法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -954,7 +1121,7 @@ FileSaver.min.js的github地址
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
