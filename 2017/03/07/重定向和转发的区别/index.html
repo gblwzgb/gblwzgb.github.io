@@ -87,15 +87,28 @@
 
 
 
-<meta name="description" content="每天进步一点">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lxl's Blog">
-<meta property="og:url" content="http://yoursite.com/categories/JavaScript/index.html">
+<meta name="description" content="说起重定向和转发，可能好多人的第一印象就是重定向的浏览器地址会变，而转发的不会变。下面说说为什么会这样。
+重定向Tomcat7用的是servlet-api的3.0版本，文档如下
+查看源码可以知道，重定向的时候，服务端会向客户端发送一个302的状态码（用这个可以劫持URL），还有一个重定向的地址，然后客户端会请求这个重定向的地址。所以造成了浏览器的地址变化。
+而在重定向完的代码中，有个finally">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重定向和转发的区别">
+<meta property="og:url" content="http://yoursite.com/2017/03/07/重定向和转发的区别/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="每天进步一点">
+<meta property="og:description" content="说起重定向和转发，可能好多人的第一印象就是重定向的浏览器地址会变，而转发的不会变。下面说说为什么会这样。
+重定向Tomcat7用的是servlet-api的3.0版本，文档如下
+查看源码可以知道，重定向的时候，服务端会向客户端发送一个302的状态码（用这个可以劫持URL），还有一个重定向的地址，然后客户端会请求这个重定向的地址。所以造成了浏览器的地址变化。
+而在重定向完的代码中，有个finally">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/17711967-file_1488865978409_11899.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/73140436-file_1488866447608_13886.png">
+<meta property="og:updated_time" content="2017-03-07T07:03:31.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lxl's Blog">
-<meta name="twitter:description" content="每天进步一点">
+<meta name="twitter:title" content="重定向和转发的区别">
+<meta name="twitter:description" content="说起重定向和转发，可能好多人的第一印象就是重定向的浏览器地址会变，而转发的不会变。下面说说为什么会这样。
+重定向Tomcat7用的是servlet-api的3.0版本，文档如下
+查看源码可以知道，重定向的时候，服务端会向客户端发送一个302的状态码（用这个可以劫持URL），还有一个重定向的地址，然后客户端会请求这个重定向的地址。所以造成了浏览器的地址变化。
+而在重定向完的代码中，有个finally">
+<meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/17711967-file_1488865978409_11899.png">
 
 
 
@@ -123,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/JavaScript/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/07/重定向和转发的区别/"/>
 
 
 
 
 
-  <title> 分类: JavaScript | lxl's Blog </title>
+  <title> 重定向和转发的区别 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,7 +167,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,75 +293,176 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        JavaScript
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/28/AngularJs验证动态生成的表单/" itemprop="url">
-              
-                <span itemprop="name">AngularJs验证动态生成的表单</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T18:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/28/通过js实现导入导出txt格式/" itemprop="url">
-              
-                <span itemprop="name">通过js实现导入导出txt格式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T14:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/07/重定向和转发的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxl's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                重定向和转发的区别
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T11:34:47+08:00">
+                2017-03-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tomcat/" itemprop="url" rel="index">
+                    <span itemprop="name">Tomcat</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>说起重定向和转发，可能好多人的第一印象就是重定向的浏览器地址会变，而转发的不会变。下面说说为什么会这样。</p>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>Tomcat7用的是servlet-api的3.0版本，文档如下<br><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/17711967-file_1488865978409_11899.png" alt="image"></p>
+<p>查看源码可以知道，重定向的时候，服务端会向客户端发送一个302的状态码（用这个可以劫持URL），还有一个重定向的地址，然后客户端会请求这个重定向的地址。所以造成了浏览器的地址变化。</p>
+<p>而在重定向完的代码中，有个finally代码块，会清空request里的值。所以重定向是不能用上一次的request里的数据的。</p>
+<h2 id="转发"><a href="#转发" class="headerlink" title="转发"></a>转发</h2><p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-7/73140436-file_1488866447608_13886.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">request.getRequestDispatcher(&quot;/xx/xxx/xxx.jsp&quot;).forward(request,response);</div></pre></td></tr></table></figure></p>
+<p>转发是直接在服务器完成的，所以转发以后是可以使用上一次的request里的数据的。当然在转发完成以后生成响应的时候也会清空request，但是已经使用好并返回客户端了，清空也无所谓了。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ol>
+<li>重定向是在客户端完成的，转发是在服务端完成的。</li>
+<li>重定向会丢失request里的parameter和attribute，转发不会。</li>
+<li>重定向相当于客户端请求了两次，而转发只请求了一次。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/04/git在push的时候显示the remote end hung up的解决办法/" rel="next" title="git在push的时候显示the remote end hung up的解决办法 long的解决办法">
+                <i class="fa fa-chevron-left"></i> git在push的时候显示the remote end hung up的解决办法 long的解决办法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -356,6 +470,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -375,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png"
@@ -427,6 +554,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#重定向"><span class="nav-number">1.</span> <span class="nav-text">重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转发"><span class="nav-number">2.</span> <span class="nav-text">转发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区别"><span class="nav-number">3.</span> <span class="nav-text">区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -539,6 +682,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
