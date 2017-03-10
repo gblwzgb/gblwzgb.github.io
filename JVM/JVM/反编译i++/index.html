@@ -87,16 +87,24 @@
 
 
 
-<meta name="description" content="静态内部类和成员内部类差不多。1234567891011121314public class InnerClassDemo07 &amp;#123;    public static void main(String[] args) &amp;#123;        Outer07.Inner07 inner07 = new Outer07.Inner07();    &amp;#125;&amp;#125;class Out">
+<meta name="description" content="通过反编译来研究一下java的指令集
+i = i++1234567public class Test &amp;#123;    public static void main(String... args) &amp;#123;        int i = 0;        i = i++;        System.out.println(i);  //0    &amp;#125;&amp;#125;
+使用javac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java的内部类--静态内部类【4】">
-<meta property="og:url" content="http://yoursite.com/Java基础/java基础/内部类/java的内部类--静态内部类【4】/index.html">
+<meta property="og:title" content="反编译i++">
+<meta property="og:url" content="http://yoursite.com/JVM/JVM/反编译i++/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="静态内部类和成员内部类差不多。1234567891011121314public class InnerClassDemo07 &amp;#123;    public static void main(String[] args) &amp;#123;        Outer07.Inner07 inner07 = new Outer07.Inner07();    &amp;#125;&amp;#125;class Out">
-<meta property="og:updated_time" content="2017-03-07T08:40:19.517Z">
+<meta property="og:description" content="通过反编译来研究一下java的指令集
+i = i++1234567public class Test &amp;#123;    public static void main(String... args) &amp;#123;        int i = 0;        i = i++;        System.out.println(i);  //0    &amp;#125;&amp;#125;
+使用javac">
+<meta property="og:image" content="http://images.cnitblog.com/i/535328/201403/111017360158953.jpg">
+<meta property="og:updated_time" content="2017-03-10T02:23:38.026Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java的内部类--静态内部类【4】">
-<meta name="twitter:description" content="静态内部类和成员内部类差不多。1234567891011121314public class InnerClassDemo07 &amp;#123;    public static void main(String[] args) &amp;#123;        Outer07.Inner07 inner07 = new Outer07.Inner07();    &amp;#125;&amp;#125;class Out">
+<meta name="twitter:title" content="反编译i++">
+<meta name="twitter:description" content="通过反编译来研究一下java的指令集
+i = i++1234567public class Test &amp;#123;    public static void main(String... args) &amp;#123;        int i = 0;        i = i++;        System.out.println(i);  //0    &amp;#125;&amp;#125;
+使用javac">
+<meta name="twitter:image" content="http://images.cnitblog.com/i/535328/201403/111017360158953.jpg">
 
 
 
@@ -124,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/Java基础/java基础/内部类/java的内部类--静态内部类【4】/"/>
+  <link rel="canonical" href="http://yoursite.com/JVM/JVM/反编译i++/"/>
 
 
 
 
 
-  <title> java的内部类--静态内部类【4】 | lxl's Blog </title>
+  <title> 反编译i++ | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -291,7 +299,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Java基础/java基础/内部类/java的内部类--静态内部类【4】/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/JVM/JVM/反编译i++/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -312,7 +320,7 @@
             
             
               
-                java的内部类--静态内部类【4】
+                反编译i++
               
             
           </h1>
@@ -327,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T11:34:47+08:00">
-                2017-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T11:34:47+08:00">
+                2017-03-10
               </time>
             
 
@@ -350,8 +358,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/JVM/" itemprop="url" rel="index">
+                    <span itemprop="name">JVM</span>
                   </a>
                 </span>
 
@@ -385,11 +393,29 @@
       
 
       
-        <p>静态内部类和成员内部类差不多。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClassDemo07</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Outer07.Inner07 inner07 = <span class="keyword">new</span> Outer07.Inner07();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outer07</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner07</span> </span>&#123;</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Inner07</span><span class="params">()</span> </span>&#123;</div><div class="line">            System.out.println(<span class="string">"init"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
-<li>静态内部类只能访问外部类的静态方法或变量</li>
-<li>静态内部类的创建形式是：<code>OuterClass.InnerClass inner = new OuterClass.InnerClass()</code></li>
+        <p>通过反编译来研究一下java的指令集</p>
+<h2 id="i-i"><a href="#i-i" class="headerlink" title="i = i++"></a>i = i++</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">        i = i++;</div><div class="line">        System.out.println(i);  <span class="comment">//0</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>使用javac编译后再使用<code>javap -c Test</code>反编译这个类查看它的字节码，如下（只摘取main方法）：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public static void main(java.lang.String[]);</div><div class="line">Code:</div><div class="line">0: iconst_0</div><div class="line">1: istore_1</div><div class="line">2: iload_1</div><div class="line">3: iinc 1, 1</div><div class="line">6: istore_1</div><div class="line">7: getstatic #2; //Field java/lang/System.out:Ljava/io/PrintStream;</div><div class="line">10: iload_1</div><div class="line">11: invokevirtual #3; //Method java/io/PrintStream.println:(I)V</div><div class="line">14: return</div></pre></td></tr></table></figure></p>
+<p>这里，我从第0行开始分析（分析中【】表示栈，栈的底端在左边，顶端在右边）：</p>
+<ul>
+<li>0：将常数0压入栈，栈内容：【0】</li>
+<li>1：将栈顶的元素弹出，也就是0，保存到局部变量区索引为为1（也就是变量i）的地方。栈内容：【】</li>
+<li>2：将局部变量区索引为1（也就是变量i）的值压入栈，栈内容：【0】</li>
+<li>3：将局部变量区索引为1（也就是常量i）的值加一，此时局部变量区索引为1的值（也就是i的值）是1。栈内容：【0】</li>
+<li>6：将栈顶元素弹出，保存到局部变量区索引为1（也就是i）的地方，此时i又变成了0。栈内容：【】</li>
+<li>7：获取常量池中索引为2所表示的类变量，也就是System.out。栈元素：【】</li>
+<li>10：将局部变量区索引为1的值（也就是i）压入栈。栈元素：【0】</li>
+<li>11：调用常量池索引为3的方法，也就是System.out.println</li>
+<li>14：返回main方法</li>
 </ul>
+<h2 id="i-i-1"><a href="#i-i-1" class="headerlink" title="i = ++i"></a>i = ++i</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">        i = ++i;</div><div class="line">        System.out.println(i);  <span class="comment">//1</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>同样<code>javap -c Test</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public static void main(java.lang.String...);</div><div class="line">  Code:</div><div class="line">     0: iconst_0   //0入栈，【0】</div><div class="line">     1: istore_1   //栈顶出栈，并赋值给索引为1的变量，【】</div><div class="line">     2: iinc          1, 1    //索引为1的变量+1，【】</div><div class="line">     5: iload_1    //索引为1的变量入栈，【1】</div><div class="line">     6: istore_1   //栈顶出栈，并赋值给索引为1的变量，【】</div><div class="line">     7: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;</div><div class="line">    10: iload_1</div><div class="line">    11: invokevirtual #3                  // Method java/io/PrintStream.println:(I)V</div><div class="line">    14: return</div></pre></td></tr></table></figure></p>
+<h2 id="i-i-i"><a href="#i-i-i" class="headerlink" title="i = i++ + ++i"></a>i = i++ + ++i</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">        i = i++ + ++i;</div><div class="line">        System.out.println(i);  <span class="comment">//2</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>同样<code>javap -c Test</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public static void main(java.lang.String...);</div><div class="line">  Code:</div><div class="line">     0: iconst_0   //0入栈，【0】</div><div class="line">     1: istore_1   //栈顶出栈，并赋值给索引为1的变量，【】</div><div class="line">     2: iload_1    //索引为1的变量入栈，【0】</div><div class="line">     3: iinc          1, 1    //索引为1的变量+1，【0】</div><div class="line">     6: iinc          1, 1    //索引为1的变量+1，【0】</div><div class="line">     9: iload_1    //索引为1的变量入栈，【0|2】</div><div class="line">    10: iadd       //栈顶的两个整型相加并入栈，【2】</div><div class="line">    11: istore_1   //栈顶出栈，并赋值给索引为1的变量，【】</div><div class="line">    12: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;</div><div class="line">    15: iload_1</div><div class="line">    16: invokevirtual #3                  // Method java/io/PrintStream.println:(I)V</div><div class="line">    19: return</div></pre></td></tr></table></figure></p>
+<h2 id="通过图片理解指令"><a href="#通过图片理解指令" class="headerlink" title="通过图片理解指令"></a>通过图片理解指令</h2><p>int a = 100;</p>
+<p>int b = 98;</p>
+<p>int c = a+b;</p>
+<p><img src="http://images.cnitblog.com/i/535328/201403/111017360158953.jpg" alt="image"></p>
 
       
     </div>
@@ -420,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/git/git/git在push的时候显示the remote end hung up的解决办法/" rel="next" title="git在push的时候显示the remote end hung up的解决办法 long的解决办法">
-                <i class="fa fa-chevron-left"></i> git在push的时候显示the remote end hung up的解决办法 long的解决办法
+              <a href="/Java基础/java基础/内部类/java的内部类--局部内部类【2】/" rel="next" title="java的内部类--局部内部类【2】">
+                <i class="fa fa-chevron-left"></i> java的内部类--局部内部类【2】
               </a>
             
           </div>
@@ -429,10 +455,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Java基础/java基础/内部类/java的内部类/" rel="prev" title="java的内部类">
-                java的内部类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -550,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">1.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#i-i"><span class="nav-number">1.</span> <span class="nav-text">i = i++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#i-i-1"><span class="nav-number">2.</span> <span class="nav-text">i = ++i</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#i-i-i"><span class="nav-number">3.</span> <span class="nav-text">i = i++ + ++i</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过图片理解指令"><span class="nav-number">4.</span> <span class="nav-text">通过图片理解指令</span></a></li></ol></div>
             
 
           </div>
