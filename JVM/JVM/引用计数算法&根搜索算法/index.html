@@ -103,7 +103,7 @@
 根搜索算法实现方法指定一系列">
 <meta property="og:image" content="http://p1.bpimg.com/567571/32ae7aaeee9f5952.png">
 <meta property="og:image" content="http://p1.bpimg.com/567571/1a6d6da2ca67ee60.png">
-<meta property="og:updated_time" content="2017-03-10T14:25:06.524Z">
+<meta property="og:updated_time" content="2017-03-15T06:38:11.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="引用计数算法&根搜索算法">
 <meta name="twitter:description" content="要判断JVM中哪些对象是可以被回收的。有两种算法，一起了解一下。
@@ -405,7 +405,7 @@
 <p>这个算法有个致命的缺陷，当有循环引用的时候就不行了。如下图，如果用引用计数算法，则这两个对象都不会被GC回收了。所以Java使用的是根搜索算法。</p>
 <p><img src="http://p1.bpimg.com/567571/32ae7aaeee9f5952.png" alt="image"></p>
 <h2 id="根搜索算法"><a href="#根搜索算法" class="headerlink" title="根搜索算法"></a>根搜索算法</h2><h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>指定一系列的叫做“GC Roots”的对象，以这些对象作为起点往下遍历搜索，当有对象不在搜索的路径上的时候，也就是不可达的时候，则说明它该被回收了。</p>
-<p>比如下图的Object3,4,5因为在搜索路径上，是可达的，所以不会被GC回收。<br>而Object5,6,7虽然有互相引用，但是不在根搜索的路径上，是不可达的，所以会被GC视为可回收对象。</p>
+<p>比如下图的Object2,3,4因为在搜索路径上，是可达的，所以不会被GC回收。<br>而Object5,6,7虽然有互相引用，但是不在根搜索的路径上，是不可达的，所以会被GC视为可回收对象。</p>
 <p><img src="http://p1.bpimg.com/567571/1a6d6da2ca67ee60.png" alt="image"></p>
 <h3 id="GC-Roots"><a href="#GC-Roots" class="headerlink" title="GC Roots"></a>GC Roots</h3><p>那么哪些对象是GC Roots对象呢？</p>
 <ol>
@@ -444,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JVM/JVM/反编译i++/" rel="next" title="反编译i++">
-                <i class="fa fa-chevron-left"></i> 反编译i++
+              <a href="/Java基础/java基础/内部类/java的内部类--静态内部类【4】/" rel="next" title="java的内部类--静态内部类【4】">
+                <i class="fa fa-chevron-left"></i> java的内部类--静态内部类【4】
               </a>
             
           </div>
@@ -454,8 +454,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Spring/Spring/Spring配置欢迎页引发的思考/" rel="prev" title="Spring配置欢迎页引发的思考">
-                Spring配置欢迎页引发的思考 <i class="fa fa-chevron-right"></i>
+              <a href="/JVM/JVM/反编译i++/" rel="prev" title="反编译i++">
+                反编译i++ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
