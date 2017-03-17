@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lxl.wiki/JVM/JVM/%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E7%AE%97%E6%B3%95%E5%92%8C%E6%A0%B9%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</loc>
+    
+    <lastmod>2017-03-17T08:42:08.113Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lxl.wiki/git/git/git%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E4%B8%8D%E6%83%B3%E6%8F%90%E4%BA%A4%E7%9A%84%E6%96%87%E4%BB%B6/</loc>
     
     <lastmod>2017-03-17T07:23:38.344Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://lxl.wiki/Spring/Spring/Spring%E9%85%8D%E7%BD%AE%E6%AC%A2%E8%BF%8E%E9%A1%B5%E5%BC%95%E5%8F%91%E7%9A%84%E6%80%9D%E8%80%83/</loc>
     
     <lastmod>2017-03-15T06:52:39.542Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxl.wiki/JVM/JVM/%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E7%AE%97%E6%B3%95&%E6%A0%B9%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</loc>
-    
-    <lastmod>2017-03-15T06:38:11.965Z</lastmod>
     
   </url>
   
