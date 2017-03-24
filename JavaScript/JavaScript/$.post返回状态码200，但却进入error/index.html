@@ -88,24 +88,18 @@
 
 
 <meta name="description" content="今天测试报了一个线上bug。
-表现为：当有用户的时候没有bug，但是没有用户的时候，页面报错。
-排查用简单的代码演示一下
-js代码12345$.post(&amp;quot;/xxx/xx/x&amp;quot;, &amp;#123;&amp;quot;name&amp;quot;:&amp;quot;lxl&amp;quot;&amp;#125;, function (e) &amp;#123;    console.log(&amp;apos;success&amp;apos;">
+表现为：当有用户的时候没有bug，但是没有用户的时候，页面报错。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$.post返回状态码200，但却进入error">
 <meta property="og:url" content="http://lxl.wiki/JavaScript/JavaScript/$.post返回状态码200，但却进入error/index.html">
 <meta property="og:site_name" content="lxl's Blog">
 <meta property="og:description" content="今天测试报了一个线上bug。
-表现为：当有用户的时候没有bug，但是没有用户的时候，页面报错。
-排查用简单的代码演示一下
-js代码12345$.post(&amp;quot;/xxx/xx/x&amp;quot;, &amp;#123;&amp;quot;name&amp;quot;:&amp;quot;lxl&amp;quot;&amp;#125;, function (e) &amp;#123;    console.log(&amp;apos;success&amp;apos;">
-<meta property="og:updated_time" content="2017-03-24T03:49:06.168Z">
+表现为：当有用户的时候没有bug，但是没有用户的时候，页面报错。">
+<meta property="og:updated_time" content="2017-03-24T05:58:41.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="$.post返回状态码200，但却进入error">
 <meta name="twitter:description" content="今天测试报了一个线上bug。
-表现为：当有用户的时候没有bug，但是没有用户的时候，页面报错。
-排查用简单的代码演示一下
-js代码12345$.post(&amp;quot;/xxx/xx/x&amp;quot;, &amp;#123;&amp;quot;name&amp;quot;:&amp;quot;lxl&amp;quot;&amp;#125;, function (e) &amp;#123;    console.log(&amp;apos;success&amp;apos;">
+表现为：当有用户的时候没有bug，但是没有用户的时候，页面报错。">
 
 
 
@@ -405,6 +399,7 @@ js代码12345$.post(&amp;quot;/xxx/xx/x&amp;quot;, &amp;#123;&amp;quot;name&amp;
       
         <p>今天测试报了一个线上bug。</p>
 <p>表现为：当有用户的时候没有bug，但是没有用户的时候，页面报错。</p>
+<a id="more"></a>
 <h2 id="排查"><a href="#排查" class="headerlink" title="排查"></a>排查</h2><p>用简单的代码演示一下</p>
 <p><strong>js代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$.post(&quot;/xxx/xx/x&quot;, &#123;&quot;name&quot;:&quot;lxl&quot;&#125;, function (e) &#123;</div><div class="line">    console.log(&apos;success&apos;)</div><div class="line">&#125;, &quot;json&quot;).error(function () &#123;</div><div class="line">    console.log(&apos;error&apos;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <p><strong>java代码</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(method = RequestMethod.POST, value = <span class="string">"/xxx/xx/x"</span>)</div><div class="line"><span class="keyword">public</span> ResponseEntity&lt;List&lt;User&gt;&gt; PatientOrderListBySyuser(HttpServletRequest request,</div><div class="line">                                                                         HttpServletResponse response, ModelMap model) &#123;</div><div class="line">    <span class="comment">//获取所有用户</span></div><div class="line">    List&lt;User&gt; list = userService.getUsers();</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ResponseEntity&lt;List&lt;User&gt;&gt;(list, HttpStatus.OK);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>

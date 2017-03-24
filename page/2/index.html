@@ -301,7 +301,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/内部类/通过反射分析内部类【5】/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Tomcat/Tomcat/重定向和转发的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -323,8 +323,8 @@
             
               
                 
-                <a class="post-title-link" href="/Java基础/java基础/内部类/通过反射分析内部类【5】/" itemprop="url">
-                  通过反射分析内部类【5】
+                <a class="post-title-link" href="/Tomcat/Tomcat/重定向和转发的区别/" itemprop="url">
+                  重定向和转发的区别
                 </a>
               
             
@@ -363,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/Tomcat/" itemprop="url" rel="index">
+                    <span itemprop="name">Tomcat</span>
                   </a>
                 </span>
 
@@ -400,12 +400,13 @@
       
         
           
-          从成员内部类那篇教程里我们知道，内部类是可以拿到外部类的引用的，所以可以直接访问外部类的域，方法。  
-但是拿到了引用为什么能访问private类型的域或方法呢。我们用反射来打印下面这个外部类。123456789101112public class InnerClassDemo08 &#123;  
+          说起重定向和转发，可能好多人的第一印象就是重定向的浏览器地址会变，而转发的不会变。下面说说为什么会这样。
+重定向Tomcat7用的是servlet-api的3.0版本，文档如下
+查看源码可以知道，重定向的时候，服务端会向客户端发送一个302的状态码（用这个可以劫持URL），还有一个重定向的地址，然后
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/Java基础/java基础/内部类/通过反射分析内部类【5】/#more" rel="contents">
+            <a class="btn" href="/Tomcat/Tomcat/重定向和转发的区别/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -594,7 +595,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Tomcat/Tomcat/重定向和转发的区别/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Tomcat/Tomcat/Nginx+重定向导致的问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -616,8 +617,8 @@
             
               
                 
-                <a class="post-title-link" href="/Tomcat/Tomcat/重定向和转发的区别/" itemprop="url">
-                  重定向和转发的区别
+                <a class="post-title-link" href="/Tomcat/Tomcat/Nginx+重定向导致的问题/" itemprop="url">
+                  Nginx+重定向导致的问题
                 </a>
               
             
@@ -693,13 +694,12 @@
       
         
           
-          说起重定向和转发，可能好多人的第一印象就是重定向的浏览器地址会变，而转发的不会变。下面说说为什么会这样。
-重定向Tomcat7用的是servlet-api的3.0版本，文档如下
-查看源码可以知道，重定向的时候，服务端会向客户端发送一个302的状态码（用这个可以劫持URL），还有一个重定向的地址，然后
+          场景描述在做项目迁移的时候，有个bug是页面跳转以后显示不出来： 1response.sendRedirect("/xxx/xxx.htm?action=xxx");
+原因是虽然Nginx设置了https的协议，但是根据下面的图片来看，response.sendRedirect()以后请求被重定向到
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/Tomcat/Tomcat/重定向和转发的区别/#more" rel="contents">
+            <a class="btn" href="/Tomcat/Tomcat/Nginx+重定向导致的问题/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1488,7 +1488,7 @@ java实现AOP1. 过滤器也就是Filter，技术基于java的回调机
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/java的八种基本类型~byte/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/switch的用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -1510,8 +1510,8 @@ java实现AOP1. 过滤器也就是Filter，技术基于java的回调机
             
               
                 
-                <a class="post-title-link" href="/Java基础/java基础/java的八种基本类型~byte/" itemprop="url">
-                  java的八种基本类型~byte
+                <a class="post-title-link" href="/Java基础/java基础/switch的用法/" itemprop="url">
+                  switch的用法
                 </a>
               
             
@@ -1587,22 +1587,13 @@ java实现AOP1. 过滤器也就是Filter，技术基于java的回调机
       
         
           
-          
-byte可表示的位数
-byte与int互转
-byte的包装类
-byte与字节流（TODO）
-
-byte可表示的位数
-12&gt; -2^7&gt;
-12&gt; \downarrow&gt;
-12&gt;  2^7-1&gt;
-
-byte在java中是一字节的，而一字节在内存中是8bit，而8bi
+          前言switch-case语句完全可以与if-else语句互转，但通常来说，switch-case语句执行效率要高。
+default在当前switch找不到匹配的case时执行。default并不是必须的。
+一旦case匹配，就会顺序执行后面的程序代码，而不管后面的case是否匹配，直到遇见brea
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/Java基础/java基础/java的八种基本类型~byte/#more" rel="contents">
+            <a class="btn" href="/Java基础/java基础/switch的用法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1645,7 +1636,7 @@ byte在java中是一字节的，而一字节在内存中是8bit，而8bi
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/final的用法/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/JavaScript/JavaScript/AngularJs验证动态生成的表单/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -1667,8 +1658,8 @@ byte在java中是一字节的，而一字节在内存中是8bit，而8bi
             
               
                 
-                <a class="post-title-link" href="/Java基础/java基础/final的用法/" itemprop="url">
-                  final的用法
+                <a class="post-title-link" href="/JavaScript/JavaScript/AngularJs验证动态生成的表单/" itemprop="url">
+                  AngularJs验证动态生成的表单
                 </a>
               
             
@@ -1707,8 +1698,8 @@ byte在java中是一字节的，而一字节在内存中是8bit，而8bi
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -1744,12 +1735,11 @@ byte在java中是一字节的，而一字节在内存中是8bit，而8bi
       
         
           
-          用final可以修饰类，方法，变量。分别表示类不可被继承，方法不可重写，变量不可变（不可变指的是引用地址不可变，内部的值还是可以变的）。
-代码实例final修饰的成员变量被final修饰的类变量就变成了常量，必须要进行初始化，有两次机会可以初始化，一是声明的时候直接初始化，或者在构造函数里初始化。1
+          有这么一个需求，我的表单是ng-repeat生成的，但是要做表单验证。而AngularJs的表单验证是和name绑定的。如下。1234567&lt;p&gt;邮箱:&lt;br&gt;    &lt;input type="email" name="email" ng-model="user.ema
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/Java基础/java基础/final的用法/#more" rel="contents">
+            <a class="btn" href="/JavaScript/JavaScript/AngularJs验证动态生成的表单/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
