@@ -469,7 +469,7 @@ round
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/java数组复制的四种方式/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/final的用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -491,8 +491,8 @@ round
             
               
                 
-                <a class="post-title-link" href="/Java基础/java基础/java数组复制的四种方式/" itemprop="url">
-                  java数组复制的四种方式
+                <a class="post-title-link" href="/Java基础/java基础/final的用法/" itemprop="url">
+                  final的用法
                 </a>
               
             
@@ -568,16 +568,12 @@ round
       
         
           
-          
-我测试出来的效率如图。
-但是clone方法和Arrays.copyOf谁快不好说，貌似和数据量也有关系。
-反正System.arrayCopy肯定是最快的，因为是native的方法。ArrayList里用的也是这个方法。
-Arrays.copyOf底层用的其实也是System.arrayCopy
-
+          用final可以修饰类，方法，变量。分别表示类不可被继承，方法不可重写，变量不可变（不可变指的是引用地址不可变，内部的值还是可以变的）。
+代码实例final修饰的成员变量被final修饰的类变量就变成了常量，必须要进行初始化，有两次机会可以初始化，一是声明的时候直接初始化，或者在构造函数里初始化。1
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/Java基础/java基础/java数组复制的四种方式/#more" rel="contents">
+            <a class="btn" href="/Java基础/java基础/final的用法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -766,7 +762,7 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/java的八种基本类型的默认值/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/java的八种基本类型~byte/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -788,8 +784,8 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
             
               
                 
-                <a class="post-title-link" href="/Java基础/java基础/java的八种基本类型的默认值/" itemprop="url">
-                  java的八种基本类型的默认值
+                <a class="post-title-link" href="/Java基础/java基础/java的八种基本类型~byte/" itemprop="url">
+                  java的八种基本类型~byte
                 </a>
               
             
@@ -865,53 +861,22 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
       
         
           
-          参见表格
+          
+byte可表示的位数
+byte与int互转
+byte的包装类
+byte与字节流（TODO）
 
+byte可表示的位数
+12&gt; -2^7&gt;
+12&gt; \downarrow&gt;
+12&gt;  2^7-1&gt;
 
-基本类型
-默认值
-
-
-
-
-byte
-0
-
-
-short
-0
-
-
-int
-0
-
-
-long
-0L
-
-
-float
-0.0f
-
-
-double
-0.0d
-
-
-char
-‘\u0000’
-
-
-boolean
-false
-
-
-
-代码1234567891011121314151617181920
+byte在java中是一字节的，而一字节在内存中是8bit，而8bi
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/Java基础/java基础/java的八种基本类型的默认值/#more" rel="contents">
+            <a class="btn" href="/Java基础/java基础/java的八种基本类型~byte/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
