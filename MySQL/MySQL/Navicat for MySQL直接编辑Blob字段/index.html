@@ -87,15 +87,19 @@
 
 
 
-<meta name="description" content="每天进步一点">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lxl's Blog">
-<meta property="og:url" content="http://lxl.wiki/archives/2017/page/3/index.html">
+<meta name="description" content="今天项目中用到了Blob来存储数据，结果被中文乱码问题给坑了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Navicat for MySQL直接编辑Blob字段">
+<meta property="og:url" content="http://lxl.wiki/MySQL/MySQL/Navicat for MySQL直接编辑Blob字段/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="每天进步一点">
+<meta property="og:description" content="今天项目中用到了Blob来存储数据，结果被中文乱码问题给坑了。">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/55141125-file_1490334430090_78dc.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/50795568-file_1490336844500_39c0.png">
+<meta property="og:updated_time" content="2017-03-24T07:06:59.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lxl's Blog">
-<meta name="twitter:description" content="每天进步一点">
+<meta name="twitter:title" content="Navicat for MySQL直接编辑Blob字段">
+<meta name="twitter:description" content="今天项目中用到了Blob来存储数据，结果被中文乱码问题给坑了。">
+<meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/55141125-file_1490334430090_78dc.png">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/archives/2017/page/3/"/>
+  <link rel="canonical" href="http://lxl.wiki/MySQL/MySQL/Navicat for MySQL直接编辑Blob字段/"/>
 
 
 
 
 
-  <title> 归档 | lxl's Blog </title>
+  <title> Navicat for MySQL直接编辑Blob字段 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,7 +167,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,292 +293,199 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 27 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/MySQL/MySQL/Navicat for MySQL直接编辑Blob字段/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxl's Blog">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Navicat for MySQL直接编辑Blob字段
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T12:34:47+08:00">
+                2017-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
+
+      
+        <p>今天项目中用到了Blob来存储数据，结果被中文乱码问题给坑了。  </p>
+<a id="more"></a>
+<h2 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h2><p>简化一下开发过程，如下。</p>
+<p><strong>1、建表并插入数据</strong></p>
+<p>先建了一张表，content字段使用Blob格式的。数据库都是UTF-8格式的。<br>如下图，通过直接在Navicat for MySQL的备注里写入内容来新增一条基础数据。<br><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/55141125-file_1490334430090_78dc.png" alt="image"></p>
+<p><strong>2、生成POJO</strong></p>
+<p>Java代码里对应库表的model如下。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">News</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> Integer id;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">byte</span>[] content;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 省略get/set</div><div class="line">     */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>3、查询数据库并打印</strong></p>
+<p>通过数据库连接，查询到这条数据。数据库连接里设置了UTF-8。<br>代码直接简化成伪代码了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    News news = <span class="keyword">new</span> News();  <span class="comment">//从数据库读取数据</span></div><div class="line">    System.out.println(<span class="keyword">new</span> String(news.getContent()));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>最后成功地在我的Win10上打印出了正确的中文。</p>
+<h2 id="出现乱码"><a href="#出现乱码" class="headerlink" title="出现乱码"></a>出现乱码</h2><p>然后代码提交测试，基础数据从我本机导出到.sql文件，然后插入到测试数据库内（也都是UTF-8的）。<br>发现在Linux机器下，打印出的中文是乱码。</p>
+<p>做出了以下两点修改，解决了中文乱码的问题。</p>
+<p><strong>1、在byte数组转String的时候指定编码</strong></p>
+<p>将代码改成如下。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">    News news = <span class="keyword">new</span> News();  <span class="comment">//从数据库读取数据</span></div><div class="line">    System.out.println(<span class="keyword">new</span> String(news.getContent(), <span class="string">"UTF-8"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后我的Win10也乱码了。线上也是乱码。问题并没有得到解决。</p>
+<p><strong>2、修改基础数据的维护方式</strong></p>
+<p>基础数据不直接在Navicat for MySQL编辑。  </p>
+<p>而是通过Java代码将String转成UTF-8编码格式的byte数组，然后插入到数据库中。</p>
+<p>伪代码如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">    News news = <span class="keyword">new</span> News();  <span class="comment">//从数据库读取数据</span></div><div class="line">    news.setContent(<span class="keyword">new</span> String(<span class="string">"中文"</span>, <span class="string">"UTF-8"</span>);</div><div class="line">    mapper.insert(news);  <span class="comment">//插入数据库</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>通过Java代码插入基础数据后，在Navicat for MySQL中查看。  </p>
+<p>如下图所示，Blob显示的内容为乱码</p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/50795568-file_1490336844500_39c0.png" alt="image"></p>
+<p>基础数据重新维护后，中文乱码问题解决。  </p>
+<p>本地和测试服务器的中文都显示正常了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h3><p>在Win10上的Navicat for MySQL通过<code>备注</code>查看Blob内容的时候，都是通过GBK格式的。</p>
+<p>也就是说，如果直接在Navicat for MySQL通过<code>备注</code>直接编辑Blob的内容，并写入中文时，中文会被转码成GBK格式的二进制。</p>
+<p>而我开始读取的时候读取的是GBK格式的二进制中文，<br>然后我使用了new String(byte[] bytes)方法，由于忘了指定编码，所以JVM也使用了系统默认的GBK编码。<br>所以开始的时候我的本地没有中文乱码问题的。而Linux系统默认编码不是GBK的，所以转码的时候出现了乱码。</p>
+<p>然后我使用了new String(bytes, “UTF-8”)指定了用UTF-8来将字节码转换。<br>由于数据库保存的Blob是GBK格式的，转成了UTF-8就出现了乱码，所以我本地也就出现了乱码问题。</p>
+<p>最后我通过代码插入UTF-8的Blob数据到数据库，解决了乱码问题。</p>
+<h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><ol>
+<li>不要直接在可视化工具里编辑含有Blob字段的库表。因为工具是无法确定编码的，工具帮你把中文转成blob的时候就有可能会有乱码问题。</li>
+<li>Blob是无法指定编码的，因为里面存的是字节码，字符转字节码的过程要自己做，才能指定字符转字节的编码。不要在工具里做，这样才不会被坑。</li>
+<li>编码一定要统一。要了解乱码的本质。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
       
 
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/JavaScript/JavaScript/$.post返回状态码200，但却进入error/" rel="next" title="$.post返回状态码200，但却进入error">
+                <i class="fa fa-chevron-left"></i> $.post返回状态码200，但却进入error
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Java基础/java基础/Math类中的几种取整方式/" itemprop="url">
-              
-                <span itemprop="name">Math类中的几种取整方式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T18:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/JavaScript/JavaScript/AngularJs验证动态生成的表单/" itemprop="url">
-              
-                <span itemprop="name">AngularJs验证动态生成的表单</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T18:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Java基础/java基础/final的用法/" itemprop="url">
-              
-                <span itemprop="name">final的用法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T18:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Java基础/java基础/java数组复制的四种方式/" itemprop="url">
-              
-                <span itemprop="name">java数组复制的四种方式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T18:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Java基础/java基础/java的八种基本类型的默认值/" itemprop="url">
-              
-                <span itemprop="name">java的八种基本类型的默认值</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T18:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Java基础/java基础/java的八种基本类型~byte/" itemprop="url">
-              
-                <span itemprop="name">java的八种基本类型~byte</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T18:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/JavaScript/JavaScript/通过js实现导入导出txt格式/" itemprop="url">
-              
-                <span itemprop="name">通过js实现导入导出txt格式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T14:42:47+08:00"
-              content="2017-02-28" >
-          02-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2017/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2017/">1</a><a class="page-number" href="/archives/2017/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
-
+    </div>
+  </div>
 
           
           </div>
@@ -582,6 +493,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -601,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png"
@@ -653,6 +577,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开发过程"><span class="nav-number">1.</span> <span class="nav-text">开发过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现乱码"><span class="nav-number">2.</span> <span class="nav-text">出现乱码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原因分析"><span class="nav-number">3.1.</span> <span class="nav-text">原因分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#经验"><span class="nav-number">3.2.</span> <span class="nav-text">经验</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -765,11 +705,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
