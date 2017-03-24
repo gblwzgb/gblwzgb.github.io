@@ -95,7 +95,7 @@
 <meta property="og:description" content="今天项目中用到了Blob来存储数据，结果被中文乱码问题给坑了。">
 <meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/55141125-file_1490334430090_78dc.png">
 <meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/50795568-file_1490336844500_39c0.png">
-<meta property="og:updated_time" content="2017-03-24T07:06:59.052Z">
+<meta property="og:updated_time" content="2017-03-24T07:16:41.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Navicat for MySQL直接编辑Blob字段">
 <meta name="twitter:description" content="今天项目中用到了Blob来存储数据，结果被中文乱码问题给坑了。">
@@ -415,7 +415,7 @@
 <p><strong>2、修改基础数据的维护方式</strong></p>
 <p>基础数据不直接在Navicat for MySQL编辑。  </p>
 <p>而是通过Java代码将String转成UTF-8编码格式的byte数组，然后插入到数据库中。</p>
-<p>伪代码如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">    News news = <span class="keyword">new</span> News();  <span class="comment">//从数据库读取数据</span></div><div class="line">    news.setContent(<span class="keyword">new</span> String(<span class="string">"中文"</span>, <span class="string">"UTF-8"</span>);</div><div class="line">    mapper.insert(news);  <span class="comment">//插入数据库</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>伪代码如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">    News news = <span class="keyword">new</span> News();  <span class="comment">//新增一条记录</span></div><div class="line">    news.setContent(<span class="keyword">new</span> String(<span class="string">"中文"</span>, <span class="string">"UTF-8"</span>);</div><div class="line">    mapper.insert(news);  <span class="comment">//插入数据库</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>通过Java代码插入基础数据后，在Navicat for MySQL中查看。  </p>
 <p>如下图所示，Blob显示的内容为乱码</p>
 <p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-24/50795568-file_1490336844500_39c0.png" alt="image"></p>
@@ -423,8 +423,8 @@
 <p>本地和测试服务器的中文都显示正常了。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h3><p>在Win10上的Navicat for MySQL通过<code>备注</code>查看Blob内容的时候，都是通过GBK格式的。</p>
 <p>也就是说，如果直接在Navicat for MySQL通过<code>备注</code>直接编辑Blob的内容，并写入中文时，中文会被转码成GBK格式的二进制。</p>
-<p>而我开始读取的时候读取的是GBK格式的二进制中文，<br>然后我使用了new String(byte[] bytes)方法，由于忘了指定编码，所以JVM也使用了系统默认的GBK编码。<br>所以开始的时候我的本地没有中文乱码问题的。而Linux系统默认编码不是GBK的，所以转码的时候出现了乱码。</p>
-<p>然后我使用了new String(bytes, “UTF-8”)指定了用UTF-8来将字节码转换。<br>由于数据库保存的Blob是GBK格式的，转成了UTF-8就出现了乱码，所以我本地也就出现了乱码问题。</p>
+<p>而我开始读取的时候读取的是GBK格式的二进制中文，<br>然后我使用了<code>new String(byte[] bytes)</code>方法，由于忘了指定编码，所以JVM也使用了系统默认的GBK编码。<br>所以开始的时候我的本地没有中文乱码问题的。而Linux系统默认编码不是GBK的，所以转码的时候出现了乱码。</p>
+<p>然后我使用了<code>new String(bytes, &quot;UTF-8&quot;)</code>指定了用UTF-8来将字节码转换。<br>由于数据库保存的Blob是GBK格式的，转成了UTF-8就出现了乱码，所以我本地也就出现了乱码问题。</p>
 <p>最后我通过代码插入UTF-8的Blob数据到数据库，解决了乱码问题。</p>
 <h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><ol>
 <li>不要直接在可视化工具里编辑含有Blob字段的库表。因为工具是无法确定编码的，工具帮你把中文转成blob的时候就有可能会有乱码问题。</li>
