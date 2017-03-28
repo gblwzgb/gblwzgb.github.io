@@ -85,73 +85,28 @@
 
 
 
-<meta name="description" content="方法名
-作用
-
-
-
-
-ceil
-天花板，即向上取整，结果大于等于原值
-
-
-floor
-地板，即向下取整，结果小于等于原值
-
-
-round
-四舍五入，算法为Math.floor(x+0.5)
-
-
-
-代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
+<meta name="description" content="在使用dubbo的时候，有时候会报一个Please check registry access list (whitelist/blacklist)的异常。一般报这个错误就是说你在调用的这个服务找不到provider了。
+这个时候如果想查看一个zookeeper上注册的节点有没有这个服务的话。有以下几种方式。
+&amp;lt;– more –&amp;gt;
+1. 直接通过命令行查看在Linux环境下，cd进入z">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Math类中的几种取整方式">
-<meta property="og:url" content="http://lxl.wiki/Java基础/java基础/Math类中的几种取整方式/index.html">
+<meta property="og:title" content="查看zookeeper节点的几种方式">
+<meta property="og:url" content="http://lxl.wiki/dubbo/dubbo/查看zookeeper节点的几种方式/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="方法名
-作用
-
-
-
-
-ceil
-天花板，即向上取整，结果大于等于原值
-
-
-floor
-地板，即向下取整，结果小于等于原值
-
-
-round
-四舍五入，算法为Math.floor(x+0.5)
-
-
-
-代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
-<meta property="og:updated_time" content="2017-03-01T06:22:59.487Z">
+<meta property="og:description" content="在使用dubbo的时候，有时候会报一个Please check registry access list (whitelist/blacklist)的异常。一般报这个错误就是说你在调用的这个服务找不到provider了。
+这个时候如果想查看一个zookeeper上注册的节点有没有这个服务的话。有以下几种方式。
+&amp;lt;– more –&amp;gt;
+1. 直接通过命令行查看在Linux环境下，cd进入z">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-28/5352397-file_1490678243046_11d10.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-28/40299390-file_1490678454707_8da5.png">
+<meta property="og:updated_time" content="2017-03-28T05:51:19.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Math类中的几种取整方式">
-<meta name="twitter:description" content="方法名
-作用
-
-
-
-
-ceil
-天花板，即向上取整，结果大于等于原值
-
-
-floor
-地板，即向下取整，结果小于等于原值
-
-
-round
-四舍五入，算法为Math.floor(x+0.5)
-
-
-
-代码示例12345678910111213141516171819202122public class test001 &amp;#123;    public static void main(Strin">
+<meta name="twitter:title" content="查看zookeeper节点的几种方式">
+<meta name="twitter:description" content="在使用dubbo的时候，有时候会报一个Please check registry access list (whitelist/blacklist)的异常。一般报这个错误就是说你在调用的这个服务找不到provider了。
+这个时候如果想查看一个zookeeper上注册的节点有没有这个服务的话。有以下几种方式。
+&amp;lt;– more –&amp;gt;
+1. 直接通过命令行查看在Linux环境下，cd进入z">
+<meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-28/5352397-file_1490678243046_11d10.png">
 
 
 
@@ -179,13 +134,13 @@ round
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/Java基础/java基础/Math类中的几种取整方式/"/>
+  <link rel="canonical" href="http://lxl.wiki/dubbo/dubbo/查看zookeeper节点的几种方式/"/>
 
 
 
 
 
-  <title> Math类中的几种取整方式 | lxl's Blog </title>
+  <title> 查看zookeeper节点的几种方式 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -355,7 +310,7 @@ round
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/Math类中的几种取整方式/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/dubbo/dubbo/查看zookeeper节点的几种方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -376,7 +331,7 @@ round
             
             
               
-                Math类中的几种取整方式
+                查看zookeeper节点的几种方式
               
             
           </h1>
@@ -391,8 +346,8 @@ round
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T18:42:47+08:00">
-                2017-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-28T11:34:47+08:00">
+                2017-03-28
               </time>
             
 
@@ -414,8 +369,8 @@ round
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/dubbo/" itemprop="url" rel="index">
+                    <span itemprop="name">dubbo</span>
                   </a>
                 </span>
 
@@ -431,7 +386,7 @@ round
 
           
           
-             <span id="/Java基础/java基础/Math类中的几种取整方式/" class="leancloud_visitors" data-flag-title="Math类中的几种取整方式">
+             <span id="/dubbo/dubbo/查看zookeeper节点的几种方式/" class="leancloud_visitors" data-flag-title="查看zookeeper节点的几种方式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -455,7 +410,7 @@ round
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      185
+                      477
                     </span>
               
 
@@ -471,7 +426,7 @@ round
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      1
+                      2
                     </span>
               
             </div>
@@ -490,29 +445,21 @@ round
       
 
       
-        <table>
-<thead>
-<tr>
-<th>方法名</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ceil</td>
-<td>天花板，即向上取整，结果大于等于原值</td>
-</tr>
-<tr>
-<td>floor</td>
-<td>地板，即向下取整，结果小于等于原值</td>
-</tr>
-<tr>
-<td>round</td>
-<td>四舍五入，算法为Math.floor(x+0.5)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test001</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(Math.floor(-<span class="number">10.4</span>));  <span class="comment">//-11.0</span></div><div class="line">        System.out.println(Math.floor(-<span class="number">10.6</span>));  <span class="comment">//-11.0</span></div><div class="line">        System.out.println(Math.floor(<span class="number">10.4</span>));   <span class="comment">//10.0</span></div><div class="line">        System.out.println(Math.floor(<span class="number">10.6</span>));   <span class="comment">//10.0</span></div><div class="line">        </div><div class="line">        System.out.println(Math.ceil(-<span class="number">10.4</span>));  <span class="comment">//-10.0</span></div><div class="line">        System.out.println(Math.ceil(-<span class="number">10.6</span>));  <span class="comment">//-10.0</span></div><div class="line">        System.out.println(Math.ceil(<span class="number">10.4</span>));   <span class="comment">//11.0</span></div><div class="line">        System.out.println(Math.ceil(<span class="number">10.6</span>));   <span class="comment">//11.0</span></div><div class="line">        </div><div class="line">        System.out.println(Math.round(-<span class="number">10.1</span>));  <span class="comment">//-10</span></div><div class="line">        System.out.println(Math.round(-<span class="number">10.5</span>));  <span class="comment">//-10</span></div><div class="line">        System.out.println(Math.round(-<span class="number">10.9</span>));  <span class="comment">//-11</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.1</span>));   <span class="comment">//10</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.5</span>));   <span class="comment">//11</span></div><div class="line">        System.out.println(Math.round(<span class="number">10.9</span>));   <span class="comment">//11</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>在使用dubbo的时候，有时候会报一个<code>Please check registry access list (whitelist/blacklist)</code>的异常。一般报这个错误就是说你在调用的这个服务找不到provider了。</p>
+<p>这个时候如果想查看一个zookeeper上注册的节点有没有这个服务的话。有以下几种方式。</p>
+<p>&lt;– more –&gt;</p>
+<h2 id="1-直接通过命令行查看"><a href="#1-直接通过命令行查看" class="headerlink" title="1. 直接通过命令行查看"></a>1. 直接通过命令行查看</h2><p>在Linux环境下，cd进入zookeeper的bin目录下，执行下面的命令</p>
+<p><code>./zkCli.sh -server 192.168.0.12:2181</code></p>
+<p>成功后就会进入zookeeper的命令行了。如下图。<br><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-28/5352397-file_1490678243046_11d10.png" alt="image"></p>
+<p>输入<code>help</code>可以查看有哪些命令</p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-28/40299390-file_1490678454707_8da5.png" alt="image"></p>
+<p>这里我们选用<code>ls</code>命令来查看节点。比如<code>ls /dubbo/xx.xxx.xxxx/providers</code>。这条命令会列出该路径下的所有节点。</p>
+<p>如果要删除节点的话，就使用<code>delete</code>命令，比如<code>delete /dubbo/xxx.xxx.xxxx/providers</code>。用<code>delete</code>删除节点的时候，如果有子节点，必须先删除子节点，才能删除该节点。当然你也可以使用<code>rmr</code>来递归删除，不过挺危险的。</p>
+<p><strong>这种方式打印出来的节点是没有格式化过，全部挤在一起，完全看不了。而且节点是被encode过的，更加不美观。</strong></p>
+<h2 id="2-用Java程序遍历"><a href="#2-用Java程序遍历" class="headerlink" title="2. 用Java程序遍历"></a>2. 用Java程序遍历</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.zookeeper.WatchedEvent;</div><div class="line"><span class="keyword">import</span> org.apache.zookeeper.Watcher;</div><div class="line"><span class="keyword">import</span> org.apache.zookeeper.ZooKeeper;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.net.URLDecoder;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zoo</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String connectString = <span class="string">"192.168.0.12:2181"</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> sessionTimeout = <span class="number">2000</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line"></div><div class="line">        String path = <span class="string">"/dubbo/xx.xxx.xxxx/providers"</span>;</div><div class="line"></div><div class="line">        ZooKeeper zk = <span class="keyword">new</span> ZooKeeper(connectString, sessionTimeout, <span class="keyword">new</span> Watcher() &#123;</div><div class="line">            <span class="comment">// 监控所有被触发的事件</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">process</span><span class="params">(WatchedEvent event)</span> </span>&#123;</div><div class="line">                System.out.println(<span class="string">"已经触发了"</span> + event.getType() + <span class="string">"事件！"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        <span class="comment">//获取路径下的节点</span></div><div class="line">        List&lt;String&gt; children = zk.getChildren(path, <span class="keyword">false</span>);</div><div class="line">        <span class="keyword">for</span> (String pathCd : children) &#123;</div><div class="line">            System.out.println(URLDecoder.decode(pathCd, <span class="string">"UTF-8"</span>));  <span class="comment">//记得转码</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>这种方式查看还行，但也挺麻烦。不过可以用这个来遍历删除节点。</strong></p>
+<h2 id="3-使用dubbokeeper"><a href="#3-使用dubbokeeper" class="headerlink" title="3. 使用dubbokeeper"></a>3. 使用dubbokeeper</h2><p>使用开源项目<a href="https://github.com/dubboclub/dubbokeeper" target="_blank" rel="external">dubbokeeper</a>，有可视化界面。</p>
+
       
     </div>
 
@@ -542,8 +489,8 @@ round
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java基础/java基础/java的八种基本类型~byte/" rel="next" title="java的八种基本类型~byte">
-                <i class="fa fa-chevron-left"></i> java的八种基本类型~byte
+              <a href="/MySQL/MySQL/Navicat for MySQL直接编辑Blob字段/" rel="next" title="Navicat for MySQL直接编辑Blob字段">
+                <i class="fa fa-chevron-left"></i> Navicat for MySQL直接编辑Blob字段
               </a>
             
           </div>
@@ -551,10 +498,6 @@ round
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Java基础/java基础/switch的用法/" rel="prev" title="switch的用法">
-                switch的用法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -672,7 +615,7 @@ round
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码示例"><span class="nav-number">1.</span> <span class="nav-text">代码示例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-直接通过命令行查看"><span class="nav-number">1.</span> <span class="nav-text">1. 直接通过命令行查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-用Java程序遍历"><span class="nav-number">2.</span> <span class="nav-text">2. 用Java程序遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用dubbokeeper"><span class="nav-number">3.</span> <span class="nav-text">3. 使用dubbokeeper</span></a></li></ol></div>
             
 
           </div>
