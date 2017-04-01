@@ -85,15 +85,19 @@
 
 
 
-<meta name="description" content="每天进步一点">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lxl's Blog">
-<meta property="og:url" content="http://lxl.wiki/archives/2017/index.html">
+<meta name="description" content="学习Maven插件的编写，有助于理解Maven的生命周期，goal，-D，-P参数等。
+以一个Hello,World的例子来入门Maven插件的开发吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maven插件开发(1)">
+<meta property="og:url" content="http://lxl.wiki/Maven/Maven/Maven插件开发(1)/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="每天进步一点">
+<meta property="og:description" content="学习Maven插件的编写，有助于理解Maven的生命周期，goal，-D，-P参数等。
+以一个Hello,World的例子来入门Maven插件的开发吧。">
+<meta property="og:updated_time" content="2017-04-01T03:29:43.798Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lxl's Blog">
-<meta name="twitter:description" content="每天进步一点">
+<meta name="twitter:title" content="Maven插件开发(1)">
+<meta name="twitter:description" content="学习Maven插件的编写，有助于理解Maven的生命周期，goal，-D，-P参数等。
+以一个Hello,World的例子来入门Maven插件的开发吧。">
 
 
 
@@ -121,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/archives/2017/"/>
+  <link rel="canonical" href="http://lxl.wiki/Maven/Maven/Maven插件开发(1)/"/>
 
 
 
 
 
-  <title> 归档 | lxl's Blog </title>
+  <title> Maven插件开发(1) | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,7 +165,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -287,403 +291,237 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 30 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Maven/Maven/Maven插件开发(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxl's Blog">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Maven插件开发(1)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T11:34:47+08:00">
+                2017-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Maven/" itemprop="url" rel="index">
+                    <span itemprop="name">Maven</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Maven/Maven/Maven插件开发(1)/" class="leancloud_visitors" data-flag-title="Maven插件开发(1)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">字数统计</span>
+                  
+                    <span title="字数统计" }}">
+                      636
+                    </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">阅读时长</span>
+                  
+                    <span title="阅读时长" }}">
+                      3
+                    </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
+
+      
+        <p>学习Maven插件的编写，有助于理解Maven的生命周期，goal，-D，-P参数等。</p>
+<p>以一个Hello,World的例子来入门Maven插件的开发吧。</p>
+<a id="more"></a>
+<p>Maven插件本身也是Maven项目，所以我们先搭一个Maven项目的骨架出来。</p>
+<p><strong>先创建一个pom.xml文件</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"> <span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>sample.plugin<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hello-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>maven-plugin<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Sample Maven Plugin<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-plugin-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugin-tools<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-plugin-annotations<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>指定这个sample项目的<code>groupId</code>，<code>artifactId</code>，<code>version</code>，<code>packaging</code>。加入该sample项目所需要依赖的jar包。</p>
+<p>这里要注意的是，写一个Maven插件，<code>packaging</code>必须指定为<code>maven-plugin</code>。</p>
+<p><code>artifactId</code>最好是指定为<code>xxxx-maven-plugin</code>或者是<code>maven-xxxx-plugin</code>。这对后面执行这个插件有好处。</p>
+<p><strong>编写Java代码</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> sample.plugin;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.maven.plugin.AbstractMojo;</div><div class="line"><span class="keyword">import</span> org.apache.maven.plugin.MojoExecutionException;</div><div class="line"><span class="keyword">import</span> org.apache.maven.plugin.MojoFailureException;</div><div class="line"><span class="keyword">import</span> org.apache.maven.plugins.annotations.Mojo;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Says "Hi" to the user.</div><div class="line"> */</div><div class="line"><span class="meta">@Mojo</span>(name = <span class="string">"sayhi"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GreetingMojo</span> <span class="keyword">extends</span> <span class="title">AbstractMojo</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> MojoExecutionException, MojoFailureException </span>&#123;</div><div class="line">        getLog().info(<span class="string">"Hello,world."</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>抽象类<code>AbstractMojo</code>实现了接口<code>Mojo</code>和<code>ContextEnabled</code>，除了<code>execute</code>方法要我们自己实现外，其他的都可以直接使用。</li>
+<li><code>@Mojo</code>注解是必须要的，否则install插件的时候会失败。该注解用来控制在什么时候以何种方式来执行这个mojo。</li>
+<li><code>execute</code>方法可以抛出两个异常<ul>
+<li><code>MojoExecutionException</code>，指的是非预期的异常。</li>
+<li><code>MojoFailureException</code>，指的是预期的异常。</li>
+</ul>
+</li>
+</ul>
+<p><strong>安装插件</strong></p>
+<p>在pom.xml目录下，执行<code>mvn clean install</code>命令。</p>
+<p>看到<code>BUILD SUCCESS</code>后，就可以在本地仓库里看到自己写的Maven插件了。</p>
+<p><strong>使用插件</strong></p>
+<p>我们在pom.xml里依赖一下新写的插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;build&gt;</div><div class="line">    &lt;plugins&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;sample.plugin&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;hello-maven-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">&lt;/build&gt;</div></pre></td></tr></table></figure></p>
+<p>依旧还是在pom.xml目录下，按下面的规则执行插件</p>
+<p><code>mvn groupId:artifactId:version:goal</code></p>
+<p>在刚写的sample项目里就是</p>
+<p><code>mvn sample.plugin:hello-maven-plugin:1.0.0-SNAPSHOT:sayhi</code></p>
+<p>可以看到屏幕上输出了<code>Hello,world.</code></p>
+<p>是不是执行命令太长，感觉这么写很烦，可以简写成<code>mvn hello:sayhi</code>。前提是你要遵循插件的<code>artifactId</code>指定为<code>xxxx-maven-plugin</code>或者是<code>maven-xxxx-plugin</code>。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>本篇通过一个简单的demo来入门Maven插件，下次再写一些更实际的例子。</p>
+<p><a href="http://maven.apache.org/guides/plugin/guide-java-plugin-development.html" target="_blank" rel="external">参考资料</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
       
 
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Tomcat/Tomcat/Linux熵池导致的Tomcat启动缓慢/" rel="next" title="Linux熵池导致的Tomcat启动缓慢">
+                <i class="fa fa-chevron-left"></i> Linux熵池导致的Tomcat启动缓慢
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Maven/Maven/Maven插件开发(1)/" itemprop="url">
-              
-                <span itemprop="name">Maven插件开发(1)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-01T11:34:47+08:00"
-              content="2017-04-01" >
-          04-01
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Tomcat/Tomcat/Linux熵池导致的Tomcat启动缓慢/" itemprop="url">
-              
-                <span itemprop="name">Linux熵池导致的Tomcat启动缓慢</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-29T11:34:47+08:00"
-              content="2017-03-29" >
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/dubbo/dubbo/查看zookeeper节点的几种方式/" itemprop="url">
-              
-                <span itemprop="name">查看zookeeper节点的几种方式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-28T11:34:47+08:00"
-              content="2017-03-28" >
-          03-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/MySQL/MySQL/Navicat for MySQL直接编辑Blob字段/" itemprop="url">
-              
-                <span itemprop="name">Navicat for MySQL直接编辑Blob字段</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-24T12:34:47+08:00"
-              content="2017-03-24" >
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/JavaScript/JavaScript/$.post返回状态码200，但却进入error/" itemprop="url">
-              
-                <span itemprop="name">$.post返回状态码200，但却进入error</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-24T11:34:47+08:00"
-              content="2017-03-24" >
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/git/git/git如何忽略不想提交的文件/" itemprop="url">
-              
-                <span itemprop="name">git如何忽略不想提交的文件</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-17T11:34:47+08:00"
-              content="2017-03-17" >
-          03-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Spring/Spring/Spring配置欢迎页引发的思考/" itemprop="url">
-              
-                <span itemprop="name">Spring配置欢迎页引发的思考</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-14T11:34:47+08:00"
-              content="2017-03-14" >
-          03-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/JVM/JVM/反编译i++/" itemprop="url">
-              
-                <span itemprop="name">反编译i++</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-10T11:34:47+08:00"
-              content="2017-03-10" >
-          03-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/JVM/JVM/引用计数算法和根搜索算法/" itemprop="url">
-              
-                <span itemprop="name">引用计数算法和根搜索算法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-10T11:34:47+08:00"
-              content="2017-03-10" >
-          03-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Java基础/java基础/内部类/java的内部类/" itemprop="url">
-              
-                <span itemprop="name">java的内部类</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-07T11:34:47+08:00"
-              content="2017-03-07" >
-          03-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="page-number" href="/archives/2017/page/3/">3</a><a class="extend next" rel="next" href="/archives/2017/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    </div>
+  </div>
 
           
           </div>
@@ -691,6 +529,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -710,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png"
@@ -762,6 +613,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">1.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -874,7 +741,9 @@
 
 
   
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
