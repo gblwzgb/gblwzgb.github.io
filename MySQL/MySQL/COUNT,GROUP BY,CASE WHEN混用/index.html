@@ -85,39 +85,19 @@
 
 
 
-<meta name="description" content="单例模式介绍使用单例可以减少不必要的系统开销，比如Spring里配置的数据源，创建和销毁耗费大量的资源，所以就用单例来保证项目加载的时候只生成一个实例，大家公用该实例。Spring的bean默认都是Singleton的。
-单例模式有以下特点：
-
-单例类只能有一个实例。
-单例类必须自己创建自己的唯一实例。
-单例类必须给所有其他对象提供这一实例。
-
-单例模式的写法我画了张图来总结一下我所知道的单例模式">
+<meta name="description" content="今天在使用COUNT的时候学习了新的写法。
+也就是COUNT结合CASE WHEN使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java设计模式--单例模式">
-<meta property="og:url" content="http://lxl.wiki/Java设计模式/Java设计模式/Java设计模式--单例模式/index.html">
+<meta property="og:title" content="COUNT,GROUP BY,CASE WHEN混用">
+<meta property="og:url" content="http://lxl.wiki/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="单例模式介绍使用单例可以减少不必要的系统开销，比如Spring里配置的数据源，创建和销毁耗费大量的资源，所以就用单例来保证项目加载的时候只生成一个实例，大家公用该实例。Spring的bean默认都是Singleton的。
-单例模式有以下特点：
-
-单例类只能有一个实例。
-单例类必须自己创建自己的唯一实例。
-单例类必须给所有其他对象提供这一实例。
-
-单例模式的写法我画了张图来总结一下我所知道的单例模式">
-<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-1/94738122-file_1488378897476_bff8.png">
-<meta property="og:updated_time" content="2017-03-03T02:13:06.618Z">
+<meta property="og:description" content="今天在使用COUNT的时候学习了新的写法。
+也就是COUNT结合CASE WHEN使用。">
+<meta property="og:updated_time" content="2017-04-11T02:58:13.734Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java设计模式--单例模式">
-<meta name="twitter:description" content="单例模式介绍使用单例可以减少不必要的系统开销，比如Spring里配置的数据源，创建和销毁耗费大量的资源，所以就用单例来保证项目加载的时候只生成一个实例，大家公用该实例。Spring的bean默认都是Singleton的。
-单例模式有以下特点：
-
-单例类只能有一个实例。
-单例类必须自己创建自己的唯一实例。
-单例类必须给所有其他对象提供这一实例。
-
-单例模式的写法我画了张图来总结一下我所知道的单例模式">
-<meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-3-1/94738122-file_1488378897476_bff8.png">
+<meta name="twitter:title" content="COUNT,GROUP BY,CASE WHEN混用">
+<meta name="twitter:description" content="今天在使用COUNT的时候学习了新的写法。
+也就是COUNT结合CASE WHEN使用。">
 
 
 
@@ -145,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/Java设计模式/Java设计模式/Java设计模式--单例模式/"/>
+  <link rel="canonical" href="http://lxl.wiki/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/"/>
 
 
 
 
 
-  <title> Java设计模式--单例模式 | lxl's Blog </title>
+  <title> COUNT,GROUP BY,CASE WHEN混用 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -321,7 +301,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java设计模式/Java设计模式/Java设计模式--单例模式/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -342,7 +322,7 @@
             
             
               
-                Java设计模式--单例模式
+                COUNT,GROUP BY,CASE WHEN混用
               
             
           </h1>
@@ -357,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T18:42:47+08:00">
-                2017-03-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T12:34:47+08:00">
+                2017-04-11
               </time>
             
 
@@ -380,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">Java设计模式</span>
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
                   </a>
                 </span>
 
@@ -397,7 +377,7 @@
 
           
           
-             <span id="/Java设计模式/Java设计模式/Java设计模式--单例模式/" class="leancloud_visitors" data-flag-title="Java设计模式--单例模式">
+             <span id="/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/" class="leancloud_visitors" data-flag-title="COUNT,GROUP BY,CASE WHEN混用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,7 +401,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      960
+                      151
                     </span>
               
 
@@ -437,7 +417,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      4
+                      1
                     </span>
               
             </div>
@@ -456,53 +436,14 @@
       
 
       
-        <h2 id="单例模式介绍"><a href="#单例模式介绍" class="headerlink" title="单例模式介绍"></a>单例模式介绍</h2><p>使用单例可以减少不必要的系统开销，比如Spring里配置的数据源，创建和销毁耗费大量的资源，所以就用单例来保证项目加载的时候只生成一个实例，大家公用该实例。Spring的bean默认都是Singleton的。</p>
-<p>单例模式有以下特点：</p>
-<ol>
-<li>单例类只能有一个实例。</li>
-<li>单例类必须自己创建自己的唯一实例。</li>
-<li>单例类必须给所有其他对象提供这一实例。</li>
-</ol>
-<h2 id="单例模式的写法"><a href="#单例模式的写法" class="headerlink" title="单例模式的写法"></a>单例模式的写法</h2><p>我画了张图来总结一下我所知道的单例模式的写法。<br><img src="http://ok7wlv1ee.bkt.clouddn.com/17-3-1/94738122-file_1488378897476_bff8.png" alt="image"></p>
-<p>具体代码演示</p>
-<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo01</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonDemo01 instance = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo01</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonDemo01 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</div><div class="line">            instance = <span class="keyword">new</span> SingletonDemo01();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这个有线程安全问题：线程A判断完实例没有创建，刚刚准备创建对象的时候，时间片切换到第二个线程B，这个时候线程B也发现实例没有创建，然后两个线程就各创建了一个对象了。</p>
-<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo02</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonDemo02 instance = <span class="keyword">new</span> SingletonDemo02();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo02</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//设置私有构造外部就不能通过new来新建实例了。</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonDemo02 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>优点</strong>：</p>
-<p>饿汉模式简单，也没有线程安全问题。</p>
-<p>了解过类加载机制的同学可能要问，如果线程A和线程B同时触发了类加载机制怎么办呢？会不会在线程切换间创建两个对象？没关系，在jvm里，类加载的时候会自动的加锁，并且有CAS保证了只有一个对象被创建。具体细节这里不展开。</p>
-<p><strong>缺点</strong>：</p>
-<p>如果我的类里定义了其他静态方法或静态变量，我只是想用一下静态方法或变量，依据getstatic指令触发类的初始化，这个时候，instance变量会跟着一起初始化，也就创建了一个SingletonDemo02的对象，白白浪费了内存。</p>
-<h3 id="单检锁"><a href="#单检锁" class="headerlink" title="单检锁"></a>单检锁</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo03</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonDemo03 instance = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo03</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> SingletonDemo03 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</div><div class="line">            instance = <span class="keyword">new</span> SingletonDemo03();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>优点</strong>:</p>
-<p>线程安全。</p>
-<p>在懒汉式上加上了synchronized关键字，也就解决了普通懒汉式线程不安全的问题。</p>
-<p><strong>缺点</strong>：</p>
-<p>锁的粒度太粗，instance==null的判断并不需要加锁。</p>
-<h3 id="双检锁"><a href="#双检锁" class="headerlink" title="双检锁"></a>双检锁</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo04</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> SingletonDemo04 instance = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo04</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> SingletonDemo04 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">synchronized</span> (SingletonDemo04.class) &#123;</div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</div><div class="line">                    instance = <span class="keyword">new</span> SingletonDemo04();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>jvm创建对象的时候大致干三件事：  </p>
-<ol>
-<li>在堆上分配内存空间</li>
-<li>执行类的构造方法初始化参数</li>
-<li>把创建的对象指向分配的内存空间地址</li>
-</ol>
-<p>在编译优化里，这几步的执行顺序并不是一定的，可能是123，也可能是132。</p>
-<p>这里的volatile是为了防止132运行的时候，别的线程发现对象不为null，然后直接去操作对象里的某些参数。</p>
-<p><strong>优点</strong>:</p>
-<p>线程安全，锁的粒度小</p>
-<p><strong>缺点</strong>：</p>
-<p>多线程学的不扎实的可能很难理解。</p>
-<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonDemo05</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonDemo05</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonManager</span> </span>&#123;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> SingletonDemo05 instance = <span class="keyword">new</span> SingletonDemo05();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonDemo05 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> SingletonManager.instance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>优点</strong>:</p>
-<p>改进了饿汉式的缺点，可以发现，现在即使SingletonDemo05里有其他的静态方法，只要我不调用getInstance()方法，我就不会白白的创建一个对象了。</p>
-<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">public enum SingletonDemo06 &#123;</div><div class="line"></div><div class="line">    INSTANCE;</div><div class="line">    </div><div class="line">    private Resource instance;</div><div class="line"></div><div class="line">    SingletonDemo06() &#123;</div><div class="line">        instance = new Resource();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public Resource getInstance() &#123;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class Resource &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>优点</strong>：</p>
-<p>前面的几种方式都可以通过反射和反序列化破坏掉</p>
-<p>由于枚举类型的特性，保证了线程安全、反射安全和反序列化安全</p>
-<p>在《Effective Java》书中有一句话是：</p>
-<blockquote>
-<p>单元素的枚举类型已经成为实现Singleton的最佳方法。</p>
-</blockquote>
+        <p>今天在使用COUNT的时候学习了新的写法。</p>
+<p>也就是COUNT结合CASE WHEN使用。</p>
+<a id="more"></a>
+<p><strong>统计病人表不同年龄段各有多少人。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	pv.age,</div><div class="line">	COUNT(pv.age) AS &apos;count&apos;</div><div class="line">FROM</div><div class="line">	pv_patient_visit pv</div><div class="line">GROUP BY</div><div class="line">	pv.age</div></pre></td></tr></table></figure>
+<p><strong>统计病人表不同年龄段各有多少男人，女人。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	pv.age,</div><div class="line">	COUNT(case when pv.sex=&apos;0&apos; then 1 else null end ) AS &apos;man&apos;,</div><div class="line">	COUNT(case when pv.sex=&apos;1&apos; then 1 else null end ) AS &apos;woman&apos;</div><div class="line">FROM</div><div class="line">	pv_patient_visit pv</div><div class="line">GROUP BY</div><div class="line">	pv.age</div></pre></td></tr></table></figure>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><code>COUNT( CASE WHEN pv.sex=&#39;0&#39; THEN 1 ELSE NULL END )</code>这种写法，只适合表达式内字段属性很少的情况。比如是否删除，男女等。</p>
 
       
     </div>
@@ -533,8 +474,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Spring/Spring/ResponseEntity和@ResponseBody的区别/" rel="next" title="ResponseEntity和@ResponseBody的区别">
-                <i class="fa fa-chevron-left"></i> ResponseEntity和@ResponseBody的区别
+              <a href="/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/" rel="next" title="GROUP_CONCAT，GROUP BY结合使用">
+                <i class="fa fa-chevron-left"></i> GROUP_CONCAT，GROUP BY结合使用
               </a>
             
           </div>
@@ -542,10 +483,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/git/git/git clone的时候显示Filename too long的解决办法/" rel="prev" title="git clone的时候显示Filename too long的解决办法">
-                git clone的时候显示Filename too long的解决办法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -663,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式介绍"><span class="nav-number">1.</span> <span class="nav-text">单例模式介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式的写法"><span class="nav-number">2.</span> <span class="nav-text">单例模式的写法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#懒汉式"><span class="nav-number">2.1.</span> <span class="nav-text">懒汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#饿汉式"><span class="nav-number">2.2.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单检锁"><span class="nav-number">2.3.</span> <span class="nav-text">单检锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双检锁"><span class="nav-number">2.4.</span> <span class="nav-text">双检锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态内部类"><span class="nav-number">2.5.</span> <span class="nav-text">静态内部类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举"><span class="nav-number">2.6.</span> <span class="nav-text">枚举</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">1.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
 
           </div>
