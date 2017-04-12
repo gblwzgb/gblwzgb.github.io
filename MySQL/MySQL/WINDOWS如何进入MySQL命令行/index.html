@@ -85,16 +85,19 @@
 
 
 
-<meta name="description" content="今天做查询拼接的时候学习使用了GROUP_CONCAT。">
+<meta name="description" content="平时查看数据库都用工具Navicat for MySQL。
+今天想通过命令行来实践一下MySQL的事务隔离性，发现竟然不知道怎么进入命令行，记录一下吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GROUP_CONCAT，GROUP BY结合使用">
-<meta property="og:url" content="http://lxl.wiki/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/index.html">
+<meta property="og:title" content="WINDOWS如何进入MySQL命令行">
+<meta property="og:url" content="http://lxl.wiki/MySQL/MySQL/WINDOWS如何进入MySQL命令行/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="今天做查询拼接的时候学习使用了GROUP_CONCAT。">
-<meta property="og:updated_time" content="2017-04-11T05:06:53.796Z">
+<meta property="og:description" content="平时查看数据库都用工具Navicat for MySQL。
+今天想通过命令行来实践一下MySQL的事务隔离性，发现竟然不知道怎么进入命令行，记录一下吧。">
+<meta property="og:updated_time" content="2017-04-12T06:41:35.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GROUP_CONCAT，GROUP BY结合使用">
-<meta name="twitter:description" content="今天做查询拼接的时候学习使用了GROUP_CONCAT。">
+<meta name="twitter:title" content="WINDOWS如何进入MySQL命令行">
+<meta name="twitter:description" content="平时查看数据库都用工具Navicat for MySQL。
+今天想通过命令行来实践一下MySQL的事务隔离性，发现竟然不知道怎么进入命令行，记录一下吧。">
 
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/"/>
+  <link rel="canonical" href="http://lxl.wiki/MySQL/MySQL/WINDOWS如何进入MySQL命令行/"/>
 
 
 
 
 
-  <title> GROUP_CONCAT，GROUP BY结合使用 | lxl's Blog </title>
+  <title> WINDOWS如何进入MySQL命令行 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +301,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/MySQL/MySQL/WINDOWS如何进入MySQL命令行/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -319,7 +322,7 @@
             
             
               
-                GROUP_CONCAT，GROUP BY结合使用
+                WINDOWS如何进入MySQL命令行
               
             
           </h1>
@@ -334,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T12:34:47+08:00">
-                2017-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T14:34:47+08:00">
+                2017-04-12
               </time>
             
 
@@ -374,7 +377,7 @@
 
           
           
-             <span id="/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/" class="leancloud_visitors" data-flag-title="GROUP_CONCAT，GROUP BY结合使用">
+             <span id="/MySQL/MySQL/WINDOWS如何进入MySQL命令行/" class="leancloud_visitors" data-flag-title="WINDOWS如何进入MySQL命令行">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,7 +401,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      87
+                      184
                     </span>
               
 
@@ -433,13 +436,32 @@
       
 
       
-        <p>今天做查询拼接的时候学习使用了<code>GROUP_CONCAT</code>。</p>
+        <p>平时查看数据库都用工具Navicat for MySQL。</p>
+<p>今天想通过命令行来实践一下MySQL的事务隔离性，发现竟然不知道怎么进入命令行，记录一下吧。</p>
 <a id="more"></a>
-<p><strong>统计各年龄段所有人员的名字，并放在一个字段内</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	pv.age,</div><div class="line">	GROUP_CONCAT(DISTINCT pv.patient_name) AS &apos;all_name&apos;</div><div class="line">FROM</div><div class="line">	pv_patient_visit pv</div><div class="line">GROUP BY</div><div class="line">	pv.age</div></pre></td></tr></table></figure>
-<p>因为用了<code>GROUP BY</code>,所以使用<code>GROUP_CONCAT</code>，而不是使用<code>CONCAT</code>。</p>
-<p>因为名字可能重复，所以加上<code>DISTINCT</code>。</p>
-<p><a href="http://blog.csdn.net/gggxin/article/details/5282672" target="_blank" rel="external">参考资料</a></p>
+<p>准备工作：</p>
+<p>安装MySQL，配置环境变量，启动MySQL。这些不多说。</p>
+<ol>
+<li><p>通过WIN+R打开CMD窗口</p>
+<ul>
+<li>不知道为什么，git提供的黑窗口进不了MySQL命令行。</li>
+</ul>
+</li>
+<li><p>输入<code>mysql -h127.0.0.1 -uroot -proot</code>即可</p>
+<ul>
+<li><code>-h</code>后面是数据库连接的地址</li>
+<li><code>-u</code>后面是数据库的用户名</li>
+<li><code>-p</code>后面是数据库的密码</li>
+</ul>
+</li>
+<li><p>通过<code>show databases;</code>查看所有的库</p>
+<ul>
+<li>命令都必须以<code>;</code>作为结尾</li>
+</ul>
+</li>
+<li><p>输入<code>exit</code>或通过快捷键<code>Ctrl+C</code>退出MySQL命令行 </p>
+</li>
+</ol>
 
       
     </div>
@@ -470,8 +492,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Maven/Maven/Maven插件开发(1)/" rel="next" title="Maven插件开发(1)">
-                <i class="fa fa-chevron-left"></i> Maven插件开发(1)
+              <a href="/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/" rel="next" title="COUNT,GROUP BY,CASE WHEN混用">
+                <i class="fa fa-chevron-left"></i> COUNT,GROUP BY,CASE WHEN混用
               </a>
             
           </div>
@@ -479,10 +501,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/" rel="prev" title="COUNT,GROUP BY,CASE WHEN混用">
-                COUNT,GROUP BY,CASE WHEN混用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
