@@ -85,52 +85,43 @@
 
 
 
-<meta name="description" content="byte可表示的位数
-byte与int互转
-byte的包装类
-byte与字节流（TODO）
-
-byte可表示的位数
-12&amp;gt; -2^7&amp;gt;
-12&amp;gt; \downarrow&amp;gt;
-12&amp;gt;  2^7-1&amp;gt;
-
-byte在java中是一字节的，而一字节在内存中是8bit，而8bit中，第一位又是符号位，那只有7位可以表示数字，所以
-
-byte能表示的最大的正数在内存中是0111">
+<meta name="description" content="SQL标准定义了4类隔离级别，这是非常重要的知识点，是每个程序猿都应该熟练掌握的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java的八种基本类型~byte">
-<meta property="og:url" content="http://lxl.wiki/Java基础/java基础/java的八种基本类型~byte/index.html">
+<meta property="og:title" content="MySQL的四种隔离级别">
+<meta property="og:url" content="http://lxl.wiki/MySQL/MySQL/MySQL的四种隔离级别/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="byte可表示的位数
-byte与int互转
-byte的包装类
-byte与字节流（TODO）
-
-byte可表示的位数
-12&amp;gt; -2^7&amp;gt;
-12&amp;gt; \downarrow&amp;gt;
-12&amp;gt;  2^7-1&amp;gt;
-
-byte在java中是一字节的，而一字节在内存中是8bit，而8bit中，第一位又是符号位，那只有7位可以表示数字，所以
-
-byte能表示的最大的正数在内存中是0111">
-<meta property="og:updated_time" content="2017-03-01T06:22:30.555Z">
+<meta property="og:description" content="SQL标准定义了4类隔离级别，这是非常重要的知识点，是每个程序猿都应该熟练掌握的。">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/91904121-file_1491981549970_ef19.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/83849583-file_1491981624968_14ec8.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/131570-file_1491981956792_3200.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/88154747-file_1491982098863_13c02.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/96102531-file_1491982208328_151be.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/28486851-file_1491982546947_1225b.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/58489290-file_1491982763692_11f8a.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/69209462-file_1491982875153_e7dd.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/4245094-file_1491983073673_14dd2.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/28486851-file_1491982546947_1225b.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/58489290-file_1491982763692_11f8a.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/31618607-file_1491986479178_aad2.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/69209462-file_1491982875153_e7dd.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/76572583-file_1491987406629_6333.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/21971864-file_1492045056348_6aba.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/31142551-file_1492045141256_35c5.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/66448146-file_1492045547790_728.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/98104812-file_1492045804404_17c5.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/66351991-file_1492045858068_a810.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/79104071-file_1492045922444_1a76.png">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/34114634-file_1492045961893_10a51.png">
+<meta property="og:updated_time" content="2017-04-13T02:59:49.723Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java的八种基本类型~byte">
-<meta name="twitter:description" content="byte可表示的位数
-byte与int互转
-byte的包装类
-byte与字节流（TODO）
-
-byte可表示的位数
-12&amp;gt; -2^7&amp;gt;
-12&amp;gt; \downarrow&amp;gt;
-12&amp;gt;  2^7-1&amp;gt;
-
-byte在java中是一字节的，而一字节在内存中是8bit，而8bit中，第一位又是符号位，那只有7位可以表示数字，所以
-
-byte能表示的最大的正数在内存中是0111">
+<meta name="twitter:title" content="MySQL的四种隔离级别">
+<meta name="twitter:description" content="SQL标准定义了4类隔离级别，这是非常重要的知识点，是每个程序猿都应该熟练掌握的。">
+<meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/91904121-file_1491981549970_ef19.png">
 
 
 
@@ -158,13 +149,13 @@ byte能表示的最大的正数在内存中是0111">
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/Java基础/java基础/java的八种基本类型~byte/"/>
+  <link rel="canonical" href="http://lxl.wiki/MySQL/MySQL/MySQL的四种隔离级别/"/>
 
 
 
 
 
-  <title> java的八种基本类型~byte | lxl's Blog </title>
+  <title> MySQL的四种隔离级别 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -334,7 +325,7 @@ byte能表示的最大的正数在内存中是0111">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/java的八种基本类型~byte/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/MySQL/MySQL/MySQL的四种隔离级别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -355,7 +346,7 @@ byte能表示的最大的正数在内存中是0111">
             
             
               
-                java的八种基本类型~byte
+                MySQL的四种隔离级别
               
             
           </h1>
@@ -370,8 +361,8 @@ byte能表示的最大的正数在内存中是0111">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T18:42:47+08:00">
-                2017-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-13T14:34:47+08:00">
+                2017-04-13
               </time>
             
 
@@ -393,8 +384,8 @@ byte能表示的最大的正数在内存中是0111">
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
                   </a>
                 </span>
 
@@ -410,7 +401,7 @@ byte能表示的最大的正数在内存中是0111">
 
           
           
-             <span id="/Java基础/java基础/java的八种基本类型~byte/" class="leancloud_visitors" data-flag-title="java的八种基本类型~byte">
+             <span id="/MySQL/MySQL/MySQL的四种隔离级别/" class="leancloud_visitors" data-flag-title="MySQL的四种隔离级别">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -434,7 +425,7 @@ byte能表示的最大的正数在内存中是0111">
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      868
+                      1,704
                     </span>
               
 
@@ -450,7 +441,7 @@ byte能表示的最大的正数在内存中是0111">
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      4
+                      6
                     </span>
               
             </div>
@@ -469,36 +460,132 @@ byte能表示的最大的正数在内存中是0111">
       
 
       
-        <ol>
-<li>byte可表示的位数</li>
-<li>byte与int互转</li>
-<li>byte的包装类</li>
-<li>byte与字节流（TODO）</li>
+        <p>SQL标准定义了4类隔离级别，这是非常重要的知识点，是每个程序猿都应该熟练掌握的。</p>
+<a id="more"></a>
+<h1 id="理论基础"><a href="#理论基础" class="headerlink" title="理论基础"></a>理论基础</h1><h3 id="Read-Uncommitted（读取未提交内容）"><a href="#Read-Uncommitted（读取未提交内容）" class="headerlink" title="Read Uncommitted（读取未提交内容）"></a>Read Uncommitted（读取未提交内容）</h3><p>在该隔离级别，所有事务都可以看到其他未提交事务的执行结果。本隔离级别很少用于实际应用，因为它的性能也不比其他级别好多少。读取未提交的数据，也被称之为脏读（Dirty Read）。</p>
+<h3 id="Read-Committed（读取提交内容）"><a href="#Read-Committed（读取提交内容）" class="headerlink" title="Read Committed（读取提交内容）"></a>Read Committed（读取提交内容）</h3><p>这是大多数数据库系统的默认隔离级别（但不是MySQL默认的）。它满足了隔离的简单定义：一个事务只能看见已经提交事务所做的改变。这种隔离级别 也支持所谓的不可重复读（Nonrepeatable Read），因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。</p>
+<h3 id="Repeatable-Read（可重读）"><a href="#Repeatable-Read（可重读）" class="headerlink" title="Repeatable Read（可重读）"></a>Repeatable Read（可重读）</h3><p>这是MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行。不过理论上，这会导致另一个棘手的问题：幻读 （Phantom Read）。简单的说，幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。</p>
+<h3 id="Serializable（可串行化）"><a href="#Serializable（可串行化）" class="headerlink" title="Serializable（可串行化）"></a>Serializable（可串行化）</h3><p>这是最高的隔离级别，它通过强制事务排序，使之不可能相互冲突，从而解决幻读问题。简言之，它是在每个读的数据行上加上共享锁。在这个级别，可能导致大量的超时现象和锁竞争。</p>
+<h2 id="不同隔离级别产生的各种问题"><a href="#不同隔离级别产生的各种问题" class="headerlink" title="不同隔离级别产生的各种问题"></a>不同隔离级别产生的各种问题</h2><table>
+<thead>
+<tr>
+<th>隔离级别</th>
+<th>脏读</th>
+<th>不可重复读</th>
+<th>幻读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>read uncommitted</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>read committed</td>
+<td>×</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>repeatable read</td>
+<td>×</td>
+<td>×</td>
+<td>√或×</td>
+</tr>
+<tr>
+<td>serializable</td>
+<td>×</td>
+<td>×</td>
+<td>× </td>
+</tr>
+</tbody>
+</table>
+<p>为什么第三行的幻读是不确定的呢？因为这取决你数据库内选择的是何种存储引擎，比如InnoDB就通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了幻读了问题。</p>
+<h2 id="脏读"><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h2><p>事务T1可以看到事务T2未提交的内容。</p>
+<p><strong>举例：</strong><br>病人A的性别是男性，事务T1开启事务想查看病人A的性别，这个时候事务T2，先行一步，手滑把病人A的性别改成了女性，没有提交数据库，此时事务T1读到的病人A的性别是女性。事务T2发现改错了，回滚了事务，但是事务T1已经读到了“脏”数据。</p>
+<h2 id="不可重复读"><a href="#不可重复读" class="headerlink" title="不可重复读"></a>不可重复读</h2><p>由于事务T2对数据的修改，导致事务T1连续查询两次数据，发现两次查询出的数据不一致。</p>
+<p><strong>举例：</strong><br>病人A的性别是男性，事务T1开启事务第一次查看病人A的性别是男性，这时事务T2把病人A的性别改为女性，并提交。事务T1第二次查看病人A的性别，发现变成了女性。</p>
+<h2 id="幻读"><a href="#幻读" class="headerlink" title="幻读"></a>幻读</h2><p>事务T1按一定条件读取数据，这个时候事务T2如果在该条件内删除或新增数据，会导致事务T1再次读取数据的时候，会发现数据变多/少了。</p>
+<p><strong>举例：</strong></p>
+<ol>
+<li>如果事务T1在第一次读取的时候对数据进行了更新，那么事务T2新增的幻读的数据就被漏改了。就像幻觉一样。</li>
+<li>如果事务T1在第一次读取的时候发现数据有5条，这时事务T2新增或删除了一条数据，事务T1再次查询的时候，发现记录不是5条了。就像幻觉一样。</li>
 </ol>
-<h1 id="byte可表示的位数"><a href="#byte可表示的位数" class="headerlink" title="byte可表示的位数"></a>byte可表示的位数</h1><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; -2^7</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; \downarrow</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;  2^7-1</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>byte在java中是一字节的，而一字节在内存中是8bit，而8bit中，<br>第一位又是符号位，那只有7位可以表示数字，所以</p>
-<ul>
-<li>byte能表示的最大的正数在内存中是0111 1111，即 127</li>
-<li>byte能表示的最小的负数在内存中是1000 0000，即-128  </li>
-</ul>
-<p>可以用byte的包装类Byte.java的静态常量来查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public class Test01 &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        System.out.println(Byte.MIN_VALUE + &quot;~&quot; + Byte.MAX_VALUE);  //输出：-128~127</div><div class="line">        byte b = 128; //error，编译报错</div><div class="line">        byte c = 127; //编译通过</div><div class="line">        byte d = (byte)128; //编译通过</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="byte与int互转"><a href="#byte与int互转" class="headerlink" title="byte与int互转"></a>byte与int互转</h1><ul>
-<li><h2 id="byte转int"><a href="#byte转int" class="headerlink" title="byte转int"></a>byte转int</h2><p>好像也没什么需要注意的…</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">public class Test01 &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        /**</div><div class="line">         * int在byte范围内</div><div class="line">         */</div><div class="line">        byte b = 10;</div><div class="line">        System.out.println(b + 10);  //输出： 20</div><div class="line">        int b1 = b;</div><div class="line">        System.out.println(b1);  //输出： 10</div><div class="line">        /**</div><div class="line">         * int不在byte范围内</div><div class="line">         */</div><div class="line">        byte c = 127;</div><div class="line">        System.out.println(c + 10);  //输出： 137</div><div class="line">        int d = c + 10;</div><div class="line">        System.out.println(d);  //输出： 137，与上一句是一样的，java底层是int计算的。</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><h2 id="int转byte"><a href="#int转byte" class="headerlink" title="int转byte"></a>int转byte</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">public class Test01 &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        int i = 128;</div><div class="line">        byte j = (byte) i;  //不强转编译报错</div><div class="line">        System.out.println(j);  //输出： -128</div><div class="line">        int m = -129;</div><div class="line">        byte n = (byte) m;  //不强转编译报错</div><div class="line">        System.out.println(n);  //输出： 127</div><div class="line">        int a = 127;</div><div class="line">        byte b = (byte) a;  //不强转编译报错</div><div class="line">        System.out.println(b);  //输出： 127</div><div class="line">        byte e = 127;  //这里字面量是int，为什么不用强转呢，jvm做了处理</div><div class="line">        System.out.println(e);  //输出： 127</div><div class="line">        byte c = 127;</div><div class="line">        byte d = 1;</div><div class="line">        byte e = c + d;  //error，编译报错，必须加上强转。因为java计算是通过int的。</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>[TODO:计算一下为什么128变成了-128]</p>
-<h1 id="byte的包装类"><a href="#byte的包装类" class="headerlink" title="byte的包装类"></a>byte的包装类</h1><p>byte的包装类就是Byte，列举一下常见方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">- toString(byte b)  //静态的，调用了Integer.toString()</div><div class="line">- ByteCache() //不是很懂，也不是静态方法啊</div><div class="line">- parseByte(String s) //超过范围或者不是数字会报：NumberFormatException，调用了Integer.parseInt()</div><div class="line">- valueOf() //把括号里的参数变成Byte对象，超过范围或者不是数字会报：NumberFormatException</div><div class="line">- byteValue() //返回Byte里的byte</div><div class="line">- shortValue() //返回short，代码里加了强转，平时不写是隐式类型转换，jvm实现的。</div><div class="line">- intValue(),longValue() //同上</div><div class="line">- floatValue(),doubleValue() //同上，但是不知道精度是否会丢失【TODO】</div><div class="line">- toString() //源码里调用了Integer.toString，非静态</div><div class="line">- hashCode() //返回这个类的hashCode</div><div class="line">- equals() //直接比byte了，也不用比hashCode了</div><div class="line">- compareTo(Byte anotherByte) //和另外一个Byte比较大小</div><div class="line">- compare(byte x, byte y) //静态方法</div></pre></td></tr></table></figure>
-<p>ByteCache可以查看<a href="http://blog.csdn.net/mazhimazh/article/details/17681787" target="_blank" rel="external">128的hashCode共享</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">public class Test01 &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        System.out.println(Byte.toString((byte) 1));  //1</div><div class="line">        System.out.println(Byte.parseByte(&quot;129&quot;)); //NumberFormatException：Value out of range. Value:&quot;129&quot; Radix:10</div><div class="line">        System.out.println(Byte.parseByte(&quot;x&quot;)); //NumberFormatException：For input string: &quot;x&quot;</div><div class="line">        System.out.println(Byte.parseByte(&quot;20&quot;)); //20，调用了重写的toString方法</div><div class="line">        System.out.println(Byte.valueOf(&quot;20&quot;)); //20，与parseByte()的区别是返回类型不同，这个返回Byte</div><div class="line">        System.out.println(Byte.valueOf((byte) 130)); //-126，与parseByte()的区别是返回类型不同，这个返回Byte</div><div class="line">        Byte testByte = new Byte(&quot;-5&quot;);</div><div class="line">        System.out.println(testByte.shortValue()); //-5</div><div class="line">        System.out.println(testByte.intValue()); //-5</div><div class="line">        System.out.println(testByte.longValue()); //-5</div><div class="line">        System.out.println(testByte.floatValue()); //-5.0</div><div class="line">        System.out.println(testByte.doubleValue()); //-5.0</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Byte是final类型的类，也就是不可变的。（其他的基本类型的包装类也都是final类型的）下面的例子可以验证。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 试验包装类的自增。</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test001</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(Byte b)</span> </span>&#123;</div><div class="line">        b = b++;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Byte a = <span class="number">127</span>;</div><div class="line">        Byte b = <span class="number">127</span>;</div><div class="line">        add(++a);</div><div class="line">        System.out.println(a);  <span class="comment">//-128，自动拆箱</span></div><div class="line">        add(b);</div><div class="line">        System.out.println(b);  <span class="comment">//127</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="动手操作环节"><a href="#动手操作环节" class="headerlink" title="动手操作环节"></a>动手操作环节</h1><p>上面的概念不需要死记硬背，跟着下面的步骤试验一遍就能心里有数了。</p>
+<p>以MySQL数据库为例。</p>
+<h2 id="准备库表与基础数据"><a href="#准备库表与基础数据" class="headerlink" title="准备库表与基础数据"></a>准备库表与基础数据</h2><p>在<code>test</code>库下新增表<code>test</code>，表结构如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE `test` (</div><div class="line">  `id` int(11) NOT NULL AUTO_INCREMENT,</div><div class="line">  `num` int(11) DEFAULT NULL,</div><div class="line">  PRIMARY KEY (`id`)</div><div class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8;</div></pre></td></tr></table></figure></p>
+<p>插入三条基础数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">INSERT INTO test (num) VALUES(1);</div><div class="line">INSERT INTO test (num) VALUES(2);</div><div class="line">INSERT INTO test (num) VALUES(3);</div></pre></td></tr></table></figure></p>
+<p>进入MySQL命令行，不知道如何进入的<a href="../WINDOWS如何进入MySQL命令行">点击这里</a></p>
+<p>通过<code>use test;</code>进入具体的库</p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/91904121-file_1491981549970_ef19.png" alt="image"></p>
+<p>通过<code>show tables;</code>查看所有表</p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/83849583-file_1491981624968_14ec8.png" alt="image"></p>
+<p>下面开两个窗口，A窗口代表事务T1，B窗口代表事务T2，通过修改A窗口的事务隔离级别来试验。</p>
+<h2 id="1-将A的隔离级别设置为read-uncommitted-读未提交"><a href="#1-将A的隔离级别设置为read-uncommitted-读未提交" class="headerlink" title="1. 将A的隔离级别设置为read uncommitted(读未提交)"></a>1. 将A的隔离级别设置为read uncommitted(读未提交)</h2><p><strong>A：设置隔离级别</strong></p>
+<p><code>set session transaction isolation level read uncommitted;</code></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/131570-file_1491981956792_3200.png" alt="image"></p>
+<p><strong>A：查看隔离级别</strong></p>
+<p><code>select @@tx_isolation;</code></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/88154747-file_1491982098863_13c02.png" alt="image"></p>
+<p><strong>B：查看隔离级别</strong></p>
+<p>A的隔离级别设置只对当前连接有效，查看B的隔离级别，可以发现，还是MySQL默认的隔离级别<code>REPEATABLE-READ</code>。</p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/96102531-file_1491982208328_151be.png" alt="image"></p>
+<p>这里B窗口就使用默认的隔离级别就可以了，不需要修改。</p>
+<p><strong>A：进入事务，并查询</strong></p>
+<p><code>start transaction;</code></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/28486851-file_1491982546947_1225b.png" alt="image"></p>
+<p><strong>B：进入事务，并更新一条记录</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/58489290-file_1491982763692_11f8a.png" alt="image"><br>注意，此时B窗口还没有提交事务。</p>
+<p><strong>A：再次查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/69209462-file_1491982875153_e7dd.png" alt="image"><br>可以看到，A读到了B没有提交的事务。</p>
+<p><strong>B：回滚事务</strong></p>
+<p>通过<code>rollback;</code>来回滚事务。  </p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/4245094-file_1491983073673_14dd2.png" alt="image"></p>
+<p><strong>A：再次查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png" alt="image"></p>
+<p>如果B新增/删除记录，不提交的话。A也是能看到的。这里就不演示了。</p>
+<h2 id="2-将客户端A的事务隔离级别设置为read-committed-读已提交"><a href="#2-将客户端A的事务隔离级别设置为read-committed-读已提交" class="headerlink" title="2. 将客户端A的事务隔离级别设置为read committed(读已提交)"></a>2. 将客户端A的事务隔离级别设置为read committed(读已提交)</h2><p><strong>A：设置隔离级别</strong></p>
+<p><code>set session transaction isolation level read committed;</code></p>
+<p><strong>A：开启事务，并查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/28486851-file_1491982546947_1225b.png" alt="image"></p>
+<p><strong>B：开启事务，并修改</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/58489290-file_1491982763692_11f8a.png" alt="image"></p>
+<p><strong>A：查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png" alt="image"><br>我们发现A没有读取到B没有提交的事务。</p>
+<p><strong>B：提交事务</strong></p>
+<p><code>commit;</code></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/31618607-file_1491986479178_aad2.png" alt="image"></p>
+<p><strong>A：查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/69209462-file_1491982875153_e7dd.png" alt="image"></p>
+<p>可以看到脏读问题解决了，但是出现了不可重复读的问题。也就是A窗口第一次查询和第二次查询的结果不一样。</p>
+<h2 id="3-将A的隔离级别设置为repeatable-read-可重复读"><a href="#3-将A的隔离级别设置为repeatable-read-可重复读" class="headerlink" title="3. 将A的隔离级别设置为repeatable read(可重复读)"></a>3. 将A的隔离级别设置为repeatable read(可重复读)</h2><p><strong>A：设置隔离级别</strong></p>
+<p><code>set session transaction isolation level repeatable read;</code></p>
+<p><strong>A：开启事务并查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/76572583-file_1491987406629_6333.png" alt=""></p>
+<p><strong>B：开启事务，更新记录但不提交</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/21971864-file_1492045056348_6aba.png" alt=""></p>
+<p><strong>A：查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png" alt="image"></p>
+<p><strong>B：提交</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/31142551-file_1492045141256_35c5.png" alt=""></p>
+<p><strong>A：查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png" alt="image"><br>即使B修改了记录并提交，但是A两次的查询结果都是一样的，说明可以重复查询了。</p>
+<p><strong>B：新增记录</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/66448146-file_1492045547790_728.png" alt="image"></p>
+<p><strong>A：查询</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-12/35919306-file_1491983128743_9686.png" alt="image"></p>
+<p>并没有新增的数据，幻读问题也没有出现，因为我的MySQL用的是InnoDB作为存储引擎。</p>
+<h2 id="4-将A的隔离级别设置为Serializable-可串行化"><a href="#4-将A的隔离级别设置为Serializable-可串行化" class="headerlink" title="4. 将A的隔离级别设置为Serializable(可串行化)"></a>4. 将A的隔离级别设置为Serializable(可串行化)</h2><p><strong>A：设置隔离级别，开启事务并查询</strong></p>
+<p><code>set session transaction isolation level serializable;</code></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/98104812-file_1492045804404_17c5.png" alt="image"></p>
+<p><strong>B：开启事务，新增记录</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/66351991-file_1492045858068_a810.png" alt="image"><br>发现卡住了，因为必须等A的事务执行完毕才行。</p>
+<p><strong>A：提交事务</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/79104071-file_1492045922444_1a76.png" alt="image"></p>
+<p><strong>B：插入记录成功。</strong></p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-13/34114634-file_1492045961893_10a51.png" alt="image"></p>
 
       
     </div>
@@ -529,8 +616,8 @@ byte能表示的最大的正数在内存中是0111">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java基础/java基础/Math类中的几种取整方式/" rel="next" title="Math类中的几种取整方式">
-                <i class="fa fa-chevron-left"></i> Math类中的几种取整方式
+              <a href="/MySQL/MySQL/WINDOWS如何进入MySQL命令行/" rel="next" title="WINDOWS如何进入MySQL命令行">
+                <i class="fa fa-chevron-left"></i> WINDOWS如何进入MySQL命令行
               </a>
             
           </div>
@@ -538,10 +625,6 @@ byte能表示的最大的正数在内存中是0111">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Spring/Spring/ResponseEntity和@ResponseBody的区别/" rel="prev" title="ResponseEntity和@ResponseBody的区别">
-                ResponseEntity和@ResponseBody的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -659,7 +742,7 @@ byte能表示的最大的正数在内存中是0111">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#byte可表示的位数"><span class="nav-number">1.</span> <span class="nav-text">byte可表示的位数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#byte与int互转"><span class="nav-number">2.</span> <span class="nav-text">byte与int互转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#byte转int"><span class="nav-number">2.1.</span> <span class="nav-text">byte转int</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#int转byte"><span class="nav-number">2.2.</span> <span class="nav-text">int转byte</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#byte的包装类"><span class="nav-number">3.</span> <span class="nav-text">byte的包装类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#理论基础"><span class="nav-number">1.</span> <span class="nav-text">理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-Uncommitted（读取未提交内容）"><span class="nav-number">1.0.1.</span> <span class="nav-text">Read Uncommitted（读取未提交内容）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-Committed（读取提交内容）"><span class="nav-number">1.0.2.</span> <span class="nav-text">Read Committed（读取提交内容）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Repeatable-Read（可重读）"><span class="nav-number">1.0.3.</span> <span class="nav-text">Repeatable Read（可重读）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Serializable（可串行化）"><span class="nav-number">1.0.4.</span> <span class="nav-text">Serializable（可串行化）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同隔离级别产生的各种问题"><span class="nav-number">1.1.</span> <span class="nav-text">不同隔离级别产生的各种问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脏读"><span class="nav-number">1.2.</span> <span class="nav-text">脏读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不可重复读"><span class="nav-number">1.3.</span> <span class="nav-text">不可重复读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#幻读"><span class="nav-number">1.4.</span> <span class="nav-text">幻读</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动手操作环节"><span class="nav-number">2.</span> <span class="nav-text">动手操作环节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备库表与基础数据"><span class="nav-number">2.1.</span> <span class="nav-text">准备库表与基础数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-将A的隔离级别设置为read-uncommitted-读未提交"><span class="nav-number">2.2.</span> <span class="nav-text">1. 将A的隔离级别设置为read uncommitted(读未提交)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-将客户端A的事务隔离级别设置为read-committed-读已提交"><span class="nav-number">2.3.</span> <span class="nav-text">2. 将客户端A的事务隔离级别设置为read committed(读已提交)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-将A的隔离级别设置为repeatable-read-可重复读"><span class="nav-number">2.4.</span> <span class="nav-text">3. 将A的隔离级别设置为repeatable read(可重复读)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-将A的隔离级别设置为Serializable-可串行化"><span class="nav-number">2.5.</span> <span class="nav-text">4. 将A的隔离级别设置为Serializable(可串行化)</span></a></li></ol></li></ol></div>
             
 
           </div>
