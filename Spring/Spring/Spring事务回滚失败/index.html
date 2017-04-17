@@ -85,19 +85,21 @@
 
 
 
-<meta name="description" content="今天在使用COUNT的时候学习了新的写法。
-也就是COUNT结合CASE WHEN使用。">
+<meta name="description" content="想试验一下Spring事务的传播特性，结果发现项目的事务失效了。
+记录一下解决过程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="COUNT,GROUP BY,CASE WHEN混用">
-<meta property="og:url" content="http://lxl.wiki/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/index.html">
+<meta property="og:title" content="Spring事务回滚失败">
+<meta property="og:url" content="http://lxl.wiki/Spring/Spring/Spring事务回滚失败/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="今天在使用COUNT的时候学习了新的写法。
-也就是COUNT结合CASE WHEN使用。">
-<meta property="og:updated_time" content="2017-04-11T02:58:13.734Z">
+<meta property="og:description" content="想试验一下Spring事务的传播特性，结果发现项目的事务失效了。
+记录一下解决过程。">
+<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-17/56027604-file_1492414539241_14f62.png">
+<meta property="og:updated_time" content="2017-04-17T08:32:15.463Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="COUNT,GROUP BY,CASE WHEN混用">
-<meta name="twitter:description" content="今天在使用COUNT的时候学习了新的写法。
-也就是COUNT结合CASE WHEN使用。">
+<meta name="twitter:title" content="Spring事务回滚失败">
+<meta name="twitter:description" content="想试验一下Spring事务的传播特性，结果发现项目的事务失效了。
+记录一下解决过程。">
+<meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-4-17/56027604-file_1492414539241_14f62.png">
 
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/"/>
+  <link rel="canonical" href="http://lxl.wiki/Spring/Spring/Spring事务回滚失败/"/>
 
 
 
 
 
-  <title> COUNT,GROUP BY,CASE WHEN混用 | lxl's Blog </title>
+  <title> Spring事务回滚失败 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -301,7 +303,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Spring/Spring/Spring事务回滚失败/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -322,7 +324,7 @@
             
             
               
-                COUNT,GROUP BY,CASE WHEN混用
+                Spring事务回滚失败
               
             
           </h1>
@@ -337,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T12:34:47+08:00">
-                2017-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-17T11:34:47+08:00">
+                2017-04-17
               </time>
             
 
@@ -360,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MySQL/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL</span>
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
                   </a>
                 </span>
 
@@ -377,7 +379,7 @@
 
           
           
-             <span id="/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/" class="leancloud_visitors" data-flag-title="COUNT,GROUP BY,CASE WHEN混用">
+             <span id="/Spring/Spring/Spring事务回滚失败/" class="leancloud_visitors" data-flag-title="Spring事务回滚失败">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -401,7 +403,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      151
+                      675
                     </span>
               
 
@@ -417,7 +419,7 @@
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      1
+                      3
                     </span>
               
             </div>
@@ -436,14 +438,37 @@
       
 
       
-        <p>今天在使用COUNT的时候学习了新的写法。</p>
-<p>也就是COUNT结合CASE WHEN使用。</p>
+        <p>想试验一下Spring事务的传播特性，结果发现项目的事务失效了。</p>
+<p>记录一下解决过程。</p>
 <a id="more"></a>
-<p><strong>统计病人表不同年龄段各有多少人。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	pv.age,</div><div class="line">	COUNT(pv.age) AS &apos;count&apos;</div><div class="line">FROM</div><div class="line">	pv_patient_visit pv</div><div class="line">GROUP BY</div><div class="line">	pv.age</div></pre></td></tr></table></figure>
-<p><strong>统计病人表不同年龄段各有多少男人，女人。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	pv.age,</div><div class="line">	COUNT(case when pv.sex=&apos;0&apos; then 1 else null end ) AS &apos;man&apos;,</div><div class="line">	COUNT(case when pv.sex=&apos;1&apos; then 1 else null end ) AS &apos;woman&apos;</div><div class="line">FROM</div><div class="line">	pv_patient_visit pv</div><div class="line">GROUP BY</div><div class="line">	pv.age</div></pre></td></tr></table></figure>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><code>COUNT( CASE WHEN pv.sex=&#39;0&#39; THEN 1 ELSE NULL END )</code>这种写法，只适合表达式内字段属性很少的情况。比如是否删除，男女等。</p>
+<h2 id="代码描述"><a href="#代码描述" class="headerlink" title="代码描述"></a>代码描述</h2><p>使用的是注解式的Spring事务，贴上关键代码。</p>
+<p><strong>service代码</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> wiki.lxl.service;</div><div class="line"></div><div class="line"><span class="meta">@Service</span>(<span class="string">"studentService"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentImpl</span> <span class="keyword">implements</span> <span class="title">StudentService</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Autowired</span></div><div class="line">    <span class="keyword">private</span> StudentMapper studentMapper;</div><div class="line"></div><div class="line">    <span class="meta">@Transactional</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methodA</span><span class="params">()</span></span>&#123;</div><div class="line">        Student student = <span class="keyword">new</span> Student();</div><div class="line">        student.setId(<span class="number">1</span>);</div><div class="line">        studentMapper.insertSelective(student);</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> BusinessException(-<span class="number">1</span>, <span class="string">"error"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>controller代码</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> wiki.lxl.controller;</div><div class="line"></div><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Autowired</span></div><div class="line">    <span class="keyword">private</span> StudentService studentService;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(method = RequestMethod.POST, value = <span class="string">"/xx/xx/xxx"</span>)</div><div class="line">    <span class="meta">@ResponseBody</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createStudent</span><span class="params">(HttpServletRequest request)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        studentService.methodA();</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>spring-servlet.xml</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;aop:aspectj-autoproxy/&gt;</div><div class="line">&lt;context:annotation-config/&gt;</div><div class="line">&lt;context:component-scan base-package=&quot;wiki.lxl.controller&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>applicationContext.xml</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;context:property-placeholder location=&quot;classpath*:*.properties&quot;/&gt;</div><div class="line">&lt;context:component-scan base-package=&quot;wiki.lxl.service&quot;/&gt;</div><div class="line"></div><div class="line">&lt;bean id=&quot;dataSource&quot; class=&quot;com.alibaba.druid.pool.DruidDataSource&quot; init-method=&quot;init&quot; destroy-method=&quot;close&quot;&gt;</div><div class="line">    &lt;property name=&quot;driverClassName&quot; value=&quot;$&#123;jdbc.driver&#125;&quot;/&gt;</div><div class="line">    &lt;property name=&quot;url&quot; value=&quot;$&#123;jdbc.url&#125;&quot;/&gt;</div><div class="line">    &lt;property name=&quot;username&quot; value=&quot;$&#123;jdbc.username&#125;&quot;/&gt;</div><div class="line">    &lt;property name=&quot;password&quot; value=&quot;$&#123;jdbc.password&#125;&quot;/&gt;</div><div class="line">    &lt;property name=&quot;filters&quot; value=&quot;stat&quot;/&gt;</div><div class="line">    &lt;property name=&quot;maxActive&quot; value=&quot;$&#123;jdbc.maxActive&#125;&quot;/&gt;</div><div class="line">    &lt;property name=&quot;maxIdle&quot; value=&quot;$&#123;jdbc.maxIdle&#125;&quot;/&gt;</div><div class="line">    &lt;property name=&quot;minIdle&quot; value=&quot;$&#123;jdbc.minIdle&#125;&quot;/&gt;</div><div class="line">    &lt;property name=&quot;validationQuery&quot; value=&quot;SELECT 1&quot;/&gt;</div><div class="line">    &lt;property name=&quot;testOnBorrow&quot; value=&quot;true&quot;/&gt;</div><div class="line">    &lt;property name=&quot;timeBetweenLogStatsMillis&quot; value=&quot;300000&quot;/&gt;</div><div class="line">&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;</div><div class="line">    &lt;!--太长不贴了 --&gt;</div><div class="line">&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;!--Transaction Manager --&gt;</div><div class="line">&lt;bean id=&quot;transactionManager&quot;</div><div class="line">      class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;</div><div class="line">    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;</div><div class="line">&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;tx:annotation-driven transaction-manager=&quot;transactionManager&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<p>运行项目，虽然抛错了，但是数据还是插入成功了，没有回滚掉。</p>
+<h2 id="排错过程"><a href="#排错过程" class="headerlink" title="排错过程"></a>排错过程</h2><p><strong>查看库表的表类型</strong><br>表的类型为InnoDB，支持事务，问题不在这。</p>
+<p><strong>查看方法的访问权限</strong><br>方法的访问权限为public的，问题不在这。</p>
+<p><strong>查看抛错</strong><br>项目抛出的自定义类继承自RuntimeException，支持事务回滚，问题不在这。</p>
+<p><strong>仔细查看包扫描</strong><br>有些人的包扫描写的很宽泛，并且没有搞清楚mvn-servlet.xml和applicationContext.xml的上下文关系，导致service被扫描了多次，所以在扫描controller的地方加上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;context:exclude-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Service&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>就可以解决问题。</p>
+<p>然而我的包扫描路径写的很精确，问题不在这。</p>
+<p><strong>查看DataSource源码</strong>  </p>
+<p>项目用了阿里的Druid连接池，可以监控SQL的状态。</p>
+<p>查看了一下DruidDataSource的源码，发现是默认autoCommit的，事务还没来得及回滚，就被自动提交了。</p>
+<p><code>protected volatile boolean defaultAutoCommit = true;</code></p>
+<p>原来是Druid的原因，加上下图的配置即可。</p>
+<p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-4-17/56027604-file_1492414539241_14f62.png" alt="image"></p>
+<p>问题解决！</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>记录一下事务不起作用的可能原因</p>
+<ol>
+<li>@Transactional只对public的方法有效。</li>
+<li>同一个类中, 一个nan-transactional的方法去调用transactional的方法, 事务会失效。</li>
+<li>数据库选择的存储引擎必须支持事务，如InnoDB</li>
+<li>关闭autoCommit</li>
+<li>上下文配置错误导致service没有被扫描为事务service</li>
+<li>当RuntimeException出现并抛出才会回滚。（其实也可以是Exception，但是要显示声明）</li>
+</ol>
 
       
     </div>
@@ -474,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Maven/Maven/Maven插件开发(1)/" rel="next" title="Maven插件开发(1)">
-                <i class="fa fa-chevron-left"></i> Maven插件开发(1)
+              <a href="/MySQL/MySQL/MySQL的四种隔离级别/" rel="next" title="MySQL的四种隔离级别">
+                <i class="fa fa-chevron-left"></i> MySQL的四种隔离级别
               </a>
             
           </div>
@@ -483,10 +508,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/" rel="prev" title="GROUP_CONCAT，GROUP BY结合使用">
-                GROUP_CONCAT，GROUP BY结合使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -604,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">1.</span> <span class="nav-text">后记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码描述"><span class="nav-number">1.</span> <span class="nav-text">代码描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排错过程"><span class="nav-number">2.</span> <span class="nav-text">排错过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">3.</span> <span class="nav-text">总结：</span></a></li></ol></div>
             
 
           </div>
