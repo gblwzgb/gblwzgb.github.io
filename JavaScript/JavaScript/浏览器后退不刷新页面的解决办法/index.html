@@ -85,16 +85,16 @@
 
 
 
-<meta name="description" content="今天做查询拼接的时候学习使用了GROUP_CONCAT。">
+<meta name="description" content="在开发微信的H5页面的时候，发现ISO的微信内置浏览器后退不刷新了，然而业务实现需要刷新。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GROUP_CONCAT，GROUP BY结合使用">
-<meta property="og:url" content="http://lxl.wiki/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/index.html">
+<meta property="og:title" content="浏览器后退不刷新页面的解决办法">
+<meta property="og:url" content="http://lxl.wiki/JavaScript/JavaScript/浏览器后退不刷新页面的解决办法/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="今天做查询拼接的时候学习使用了GROUP_CONCAT。">
-<meta property="og:updated_time" content="2017-04-11T05:06:53.796Z">
+<meta property="og:description" content="在开发微信的H5页面的时候，发现ISO的微信内置浏览器后退不刷新了，然而业务实现需要刷新。">
+<meta property="og:updated_time" content="2017-04-20T05:16:55.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GROUP_CONCAT，GROUP BY结合使用">
-<meta name="twitter:description" content="今天做查询拼接的时候学习使用了GROUP_CONCAT。">
+<meta name="twitter:title" content="浏览器后退不刷新页面的解决办法">
+<meta name="twitter:description" content="在开发微信的H5页面的时候，发现ISO的微信内置浏览器后退不刷新了，然而业务实现需要刷新。">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/"/>
+  <link rel="canonical" href="http://lxl.wiki/JavaScript/JavaScript/浏览器后退不刷新页面的解决办法/"/>
 
 
 
 
 
-  <title> GROUP_CONCAT，GROUP BY结合使用 | lxl's Blog </title>
+  <title> 浏览器后退不刷新页面的解决办法 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +298,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/JavaScript/JavaScript/浏览器后退不刷新页面的解决办法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -319,7 +319,7 @@
             
             
               
-                GROUP_CONCAT，GROUP BY结合使用
+                浏览器后退不刷新页面的解决办法
               
             
           </h1>
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T12:34:47+08:00">
-                2017-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T11:34:47+08:00">
+                2017-04-20
               </time>
             
 
@@ -357,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MySQL/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -374,7 +374,7 @@
 
           
           
-             <span id="/MySQL/MySQL/GROUP_CONCAT，GROUP BY结合使用/" class="leancloud_visitors" data-flag-title="GROUP_CONCAT，GROUP BY结合使用">
+             <span id="/JavaScript/JavaScript/浏览器后退不刷新页面的解决办法/" class="leancloud_visitors" data-flag-title="浏览器后退不刷新页面的解决办法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,7 +398,7 @@
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      87
+                      232
                     </span>
               
 
@@ -433,13 +433,15 @@
       
 
       
-        <p>今天做查询拼接的时候学习使用了<code>GROUP_CONCAT</code>。</p>
+        <p>在开发微信的H5页面的时候，发现ISO的微信内置浏览器后退不刷新了，然而业务实现需要刷新。</p>
 <a id="more"></a>
-<p><strong>统计各年龄段所有人员的名字，并放在一个字段内</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	pv.age,</div><div class="line">	GROUP_CONCAT(DISTINCT pv.patient_name) AS &apos;all_name&apos;</div><div class="line">FROM</div><div class="line">	pv_patient_visit pv</div><div class="line">GROUP BY</div><div class="line">	pv.age</div></pre></td></tr></table></figure>
-<p>因为用了<code>GROUP BY</code>,所以使用<code>GROUP_CONCAT</code>，而不是使用<code>CONCAT</code>。</p>
-<p>因为名字可能重复，所以加上<code>DISTINCT</code>。</p>
-<p><a href="http://blog.csdn.net/gggxin/article/details/5282672" target="_blank" rel="external">参考资料</a></p>
+<p>IOS上的微信内置浏览器为了优化用户体验，采用了后退不刷新的策略，也就是A页面打开B页面，B页面后退到A页面的时候，A页面不刷新（连JS都不执行）。</p>
+<p>可以理解成A页面打开B页面的时候，A页面被隐藏了，后退的时候只是把A页面显示出来了。</p>
+<p>这种情况禁缓存是没有效果的，可以通过监听<code>onpageshow</code>来刷新页面。</p>
+<p>代码如下，在A页面的JS中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//解决IOS微信webview后退不执行JS的问题</div><div class="line">window.onpageshow = function(event) &#123;</div><div class="line">    if (event.persisted) &#123;</div><div class="line">        window.location.reload();</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><code>event.persisted</code>为了查看页面是直接从服务器上载入还是从缓存中读取的。</p>
+<p><a href="http://www.runoob.com/jsref/event-onpageshow.html" target="_blank" rel="external">参考onpageshow用法</a></p>
+<p><a href="http://stackoverflow.com/a/31568274" target="_blank" rel="external">stackoverflow</a></p>
 
       
     </div>
@@ -470,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Maven/Maven/Maven插件开发(1)/" rel="next" title="Maven插件开发(1)">
-                <i class="fa fa-chevron-left"></i> Maven插件开发(1)
+              <a href="/MySQL/MySQL/MySQL的四种隔离级别/" rel="next" title="MySQL的四种隔离级别">
+                <i class="fa fa-chevron-left"></i> MySQL的四种隔离级别
               </a>
             
           </div>
@@ -479,10 +481,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/MySQL/MySQL/COUNT,GROUP BY,CASE WHEN混用/" rel="prev" title="COUNT,GROUP BY,CASE WHEN混用">
-                COUNT,GROUP BY,CASE WHEN混用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
