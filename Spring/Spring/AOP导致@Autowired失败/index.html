@@ -85,33 +85,16 @@
 
 
 
-<meta name="description" content="我测试出来的效率如图。
-但是clone方法和Arrays.copyOf谁快不好说，貌似和数据量也有关系。
-反正System.arrayCopy肯定是最快的，因为是native的方法。ArrayList里用的也是这个方法。
-Arrays.copyOf底层用的其实也是System.arrayCopy
-测试代码如下
-1234567891011121314151617181920212223242526">
+<meta name="description" content="今天给某个service方法加了一个切面，然后项目就启动报错了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java数组复制的四种方式">
-<meta property="og:url" content="http://lxl.wiki/Java基础/java基础/java数组复制的四种方式/index.html">
+<meta property="og:title" content="AOP导致@Autowired失败">
+<meta property="og:url" content="http://lxl.wiki/Spring/Spring/AOP导致@Autowired失败/index.html">
 <meta property="og:site_name" content="lxl's Blog">
-<meta property="og:description" content="我测试出来的效率如图。
-但是clone方法和Arrays.copyOf谁快不好说，貌似和数据量也有关系。
-反正System.arrayCopy肯定是最快的，因为是native的方法。ArrayList里用的也是这个方法。
-Arrays.copyOf底层用的其实也是System.arrayCopy
-测试代码如下
-1234567891011121314151617181920212223242526">
-<meta property="og:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-2-9/19026684-file_1486612180846_1715d.png">
-<meta property="og:updated_time" content="2017-03-01T06:22:51.399Z">
+<meta property="og:description" content="今天给某个service方法加了一个切面，然后项目就启动报错了。">
+<meta property="og:updated_time" content="2017-04-20T10:49:26.931Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java数组复制的四种方式">
-<meta name="twitter:description" content="我测试出来的效率如图。
-但是clone方法和Arrays.copyOf谁快不好说，貌似和数据量也有关系。
-反正System.arrayCopy肯定是最快的，因为是native的方法。ArrayList里用的也是这个方法。
-Arrays.copyOf底层用的其实也是System.arrayCopy
-测试代码如下
-1234567891011121314151617181920212223242526">
-<meta name="twitter:image" content="http://ok7wlv1ee.bkt.clouddn.com/17-2-9/19026684-file_1486612180846_1715d.png">
+<meta name="twitter:title" content="AOP导致@Autowired失败">
+<meta name="twitter:description" content="今天给某个service方法加了一个切面，然后项目就启动报错了。">
 
 
 
@@ -139,13 +122,13 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
 
 
 
-  <link rel="canonical" href="http://lxl.wiki/Java基础/java基础/java数组复制的四种方式/"/>
+  <link rel="canonical" href="http://lxl.wiki/Spring/Spring/AOP导致@Autowired失败/"/>
 
 
 
 
 
-  <title> java数组复制的四种方式 | lxl's Blog </title>
+  <title> AOP导致@Autowired失败 | lxl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +298,7 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Java基础/java基础/java数组复制的四种方式/">
+    <link itemprop="mainEntityOfPage" href="http://lxl.wiki/Spring/Spring/AOP导致@Autowired失败/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxl">
@@ -336,7 +319,7 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
             
             
               
-                java数组复制的四种方式
+                AOP导致@Autowired失败
               
             
           </h1>
@@ -351,8 +334,8 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T18:42:47+08:00">
-                2017-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-20T18:34:47+08:00">
+                2017-04-20
               </time>
             
 
@@ -374,8 +357,8 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/Spring/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring</span>
                   </a>
                 </span>
 
@@ -391,7 +374,7 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
 
           
           
-             <span id="/Java基础/java基础/java数组复制的四种方式/" class="leancloud_visitors" data-flag-title="java数组复制的四种方式">
+             <span id="/Spring/Spring/AOP导致@Autowired失败/" class="leancloud_visitors" data-flag-title="AOP导致@Autowired失败">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -415,7 +398,7 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
                     <span class="post-meta-item-text">字数统计</span>
                   
                     <span title="字数统计" }}">
-                      303
+                      278
                     </span>
               
 
@@ -431,7 +414,7 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
                     <span class="post-meta-item-text">阅读时长</span>
                   
                     <span title="阅读时长" }}">
-                      2
+                      1
                     </span>
               
             </div>
@@ -450,13 +433,20 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
       
 
       
-        <p><img src="http://ok7wlv1ee.bkt.clouddn.com/17-2-9/19026684-file_1486612180846_1715d.png" alt="image"></p>
-<p>我测试出来的效率如图。</p>
-<p>但是clone方法和Arrays.copyOf谁快不好说，貌似和数据量也有关系。</p>
-<p>反正System.arrayCopy肯定是最快的，因为是native的方法。ArrayList里用的也是这个方法。</p>
-<p>Arrays.copyOf底层用的其实也是System.arrayCopy</p>
-<p><strong>测试代码如下</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayCopyTest</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String[] src</div><div class="line">            = &#123;<span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>,</div><div class="line">            <span class="string">"Aaaaaaaaaa"</span>, <span class="string">"Vvvvvvv"</span>, <span class="string">"Bbbb"</span>, <span class="string">"Cccc"</span>, <span class="string">"Dddd"</span>, <span class="string">"Eddeee"</span>, <span class="string">"FFFFFFffffffff"</span>&#125;;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String[] dst;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> num = <span class="number">5000000</span>;</div><div class="line">        System.out.println(forCopy(num));</div><div class="line">        System.out.println(cloneCopy(num));</div><div class="line">        System.out.println(systemJNICopy(num));</div><div class="line">        System.out.println(ArraysToolCopy(num));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">forCopy</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</div><div class="line">        <span class="keyword">while</span> (num-- &gt; <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">int</span> size = src.length;</div><div class="line">            dst = <span class="keyword">new</span> String[size];</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</div><div class="line">                dst[i] = src[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</div><div class="line">        <span class="keyword">return</span> end - start;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">cloneCopy</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</div><div class="line">        <span class="keyword">while</span> (num-- &gt; <span class="number">0</span>) &#123;</div><div class="line">            dst = src.clone();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</div><div class="line">        <span class="keyword">return</span> end - start;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">systemJNICopy</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</div><div class="line">        <span class="keyword">while</span> (num-- &gt; <span class="number">0</span>) &#123;</div><div class="line">            System.arraycopy(src, <span class="number">0</span>, dst, <span class="number">0</span>, src.length);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</div><div class="line">        <span class="keyword">return</span> end - start;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">ArraysToolCopy</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</div><div class="line">        <span class="keyword">while</span> (num-- &gt; <span class="number">0</span>) &#123;</div><div class="line">            dst = Arrays.copyOf(src, src.length);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</div><div class="line">        <span class="keyword">return</span> end - start;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>今天给某个service方法加了一个切面，然后项目就启动报错了。</p>
+<a id="more"></a>
+<p>用简单的代码演示一下。</p>
+<p><strong>service代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public interface StuentService &#123;</div><div class="line">    void print();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>service实现类代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@service(&quot;studentServiceImpl&quot;)</div><div class="line">public class StuentServiceImpl implements StuentService&#123;</div><div class="line">    public void print()&#123;</div><div class="line">        //</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>controller代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@RestController</div><div class="line">public class StudentController &#123;</div><div class="line"></div><div class="line">    @Autowired</div><div class="line">    private StuentServiceImpl studentServiceImpl;</div><div class="line">    </div><div class="line">    //省略mapping方法</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>当我加上切面时</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Around(&quot;execution(* wiki.lxl.service.StudentService.print(..))&quot;)</div><div class="line">public Object print(ProceedingJoinPoint joinPoint) throws Throwable &#123;</div><div class="line">    return joinPoint.proceed();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>启动项目，报错了<br><code>Error creating bean with name &#39;studentController&#39;</code>，因为没有类型为<code>StuentServiceImpl</code>的bean，所以注入失败了。</p>
+<p>把controller里的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">private StuentServiceImpl studentServiceImpl;</div></pre></td></tr></table></figure></p>
+<p>改成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">private StuentService studentServiceImpl;</div></pre></td></tr></table></figure></p>
+<p>问题就解决了。</p>
+<p>因为AOP是基于代理模式的，在切print方法的时候，其实是生成了一个实现<code>StudentService</code>的代理类proxy，这个proxy类是无法把引用赋给<code>StudentServiceImpl</code>的。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>平时的《设计模式之禅》没有白看，虽然平时框架帮我们实现好了N多功能，我们也许很少用到其中的设计模式，但是看到源码就知道这里使用了哪种设计模式的能力，个人觉得还是很有必要的。</p>
+
       
     </div>
 
@@ -486,8 +476,8 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java基础/java基础/switch的用法/" rel="next" title="switch的用法">
-                <i class="fa fa-chevron-left"></i> switch的用法
+              <a href="/JavaScript/JavaScript/浏览器后退不刷新页面的解决办法/" rel="next" title="浏览器后退不刷新页面的解决办法">
+                <i class="fa fa-chevron-left"></i> 浏览器后退不刷新页面的解决办法
               </a>
             
           </div>
@@ -495,10 +485,6 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Java基础/java基础/final的用法/" rel="prev" title="final的用法">
-                final的用法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -545,8 +531,17 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ok7wlv1ee.bkt.clouddn.com/17-2-28/52959198-file_1488263330253_3a4b.png"
@@ -597,6 +592,22 @@ Arrays.copyOf底层用的其实也是System.arrayCopy
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">1.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
