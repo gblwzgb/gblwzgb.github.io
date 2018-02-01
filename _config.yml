@@ -12,9 +12,10 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://lxl.wiki
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
+#permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -69,9 +70,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:gblwzgb/gblwzgb.github.io.git
-  branch: master
-  
+  repo:
+      github: git@github.com:gblwzgb/gblwzgb.github.io.git,master
+      coding: git@git.coding.net:lxl-coder/lxl-coder.git,master
 # Search
 algolia:
   applicationID: 'QTCPSNMWGO'
@@ -85,3 +86,9 @@ search:
   field: post
   format: html
   limit: 10000
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
